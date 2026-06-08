@@ -9,7 +9,6 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description: "Complete v1.1.2 guide with endings, items, night event counters, rescue routes, Steam status, and survival tips.",
-  robots: { index: false, follow: false },
   openGraph: {
     title: "Don't Sleep With The Fishes Guide & Wiki",
     description: "Complete v1.1.2 guide with endings, items, night event counters, rescue routes, Steam status, and survival tips.",
