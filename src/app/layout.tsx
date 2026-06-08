@@ -3,7 +3,7 @@ import { AppShell } from "./components/layout/AppShell";
 import "../styles/index.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dontsleepwiththefishes.net"),
+  metadataBase: new URL("https://www.dontsleepwiththefishes.net"),
   title: {
     default: "Don't Sleep With The Fishes Guide & Wiki",
     template: "%s",
