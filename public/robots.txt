@@ -1,0 +1,4 @@
+# Staging environment — disallow all crawlers
+# TODO: update when deploying to production domain
+User-agent: *
+Disallow: /

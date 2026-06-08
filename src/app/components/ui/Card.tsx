@@ -1,5 +1,7 @@
+"use client";
+
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -28,7 +30,7 @@ interface NavCardProps {
 export function NavCard({ title, description, icon, href, badge }: NavCardProps) {
   return (
     <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.12 }}>
-      <Link to={href} className="group flex items-start gap-3.5 rounded-xl border border-border-color bg-bg-tertiary px-4 py-4 transition-all duration-200 hover:border-amber/30 hover:bg-bg-surface" style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
+      <Link href={href} className="group flex items-start gap-3.5 rounded-xl border border-border-color bg-bg-tertiary px-4 py-4 transition-all duration-200 hover:border-amber/30 hover:bg-bg-surface" style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
         <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border transition-all duration-200 group-hover:border-amber/50" style={{ background: "rgba(245,158,11,0.08)", borderColor: "rgba(245,158,11,0.15)" }}>
           <span className="text-amber-muted transition-colors duration-200 group-hover:text-amber [&>svg]:h-4 [&>svg]:w-4">{icon}</span>
         </div>

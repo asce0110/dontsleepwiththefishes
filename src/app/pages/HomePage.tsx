@@ -1,30 +1,60 @@
+"use client";
+
 import { SEO } from "../components/SEO";
 import {
   BookOpen, Map, Package, Trophy,
   AlertTriangle, Target, HelpCircle, Lightbulb,
-  ExternalLink, Fish, ArrowRight, Anchor, ChevronRight,
+  ExternalLink, Fish, ArrowRight, Anchor, ChevronRight, ShieldCheck,
+  Skull, Star, Siren, Waves, Compass, Sparkles,
 } from "lucide-react";
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
-import gameImage from "../../imports/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png";
+import Link from "next/link";
+const gameImage = "/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { useIsDesktop } from "../components/BentoGrid";
 
-const PIRATA: React.CSSProperties = { fontFamily: "'Pirata One', cursive" };
+const PIRATA: React.CSSProperties = { fontFamily: "'Fredoka', sans-serif", fontWeight: 600 };
 const NUNITO: React.CSSProperties = { fontFamily: "'Nunito', sans-serif" };
 
 const stats = [
   { value: "35+", label: "Items" },
-  { value: "12+", label: "Endings" },
+  { value: "12+", label: "Outcomes" },
   { value: "20+", label: "Events" },
-  { value: "25+", label: "Achiev." },
+  { value: "v1.1.2", label: "Updated" },
 ];
 
-function StatPill({ value, label }: { value: string; label: string }) {
+const eventPreview = [
+  { event: "Giant Squid", bestPage: "Pay Debt / True Ending", intent: "pay debt / true ending", icon: <Siren className="h-3.5 w-3.5" />, href: "/events/giant-squid/" },
+  { event: "Hope", bestPage: "Make Yourself Visible", intent: "rescue route", icon: <Star className="h-3.5 w-3.5" />, href: "/endings/rescue/" },
+  { event: "Seagull", bestPage: "Bad Ending Prevention", intent: "avoid seagull ending", icon: <Skull className="h-3.5 w-3.5" />, href: "/events/seagull/" },
+  { event: "Eerie Melody", bestPage: "Duct Tape / Bucket", intent: "leak prevention", icon: <Waves className="h-3.5 w-3.5" />, href: "/events/eerie-melody/" },
+  { event: "Eyes", bestPage: "Stay Awake Strategy", intent: "protect shipmate", icon: <ShieldCheck className="h-3.5 w-3.5" />, href: "/events/eyes/" },
+  { event: "Whirlpool", bestPage: "Anchor Use", intent: "avoid ship loss", icon: <Compass className="h-3.5 w-3.5" />, href: "/events/whirlpool/" },
+];
+
+const endingPreview = [
+  { type: "Rescue Ending", guide: "Make Yourself Visible", href: "/endings/rescue/", accent: "#22c55e" },
+  { type: "True Ending", guide: "Heart of the Sea Route", href: "/endings/true-ending/", accent: "#f59e0b" },
+  { type: "Pay Debt Route", guide: "Giant Squid Counter", href: "/endings/pay-debt/", accent: "#fbbf24" },
+  { type: "Ghost Ship", guide: "Flying Dutchman Hidden Ending", href: "/endings/", accent: "#a78bfa" },
+  { type: "Seagull Bad Ending", guide: "How to Avoid It", href: "/events/seagull/", accent: "#ef4444" },
+  { type: "Survival Record", guide: "Highest Day Reached", href: "/speedrun/", accent: "#60a5fa" },
+];
+
+function StatPill({ value, label, highlight }: { value: string; label: string; highlight?: boolean }) {
   return (
-    <div className="flex flex-col items-center rounded-2xl border px-4 py-3" style={{ borderColor: "rgba(245,158,11,0.15)", background: "rgba(245,158,11,0.05)" }}>
-      <span className="text-lg font-black leading-none" style={{ ...PIRATA, background: "linear-gradient(135deg,#f59e0b,#fde68a)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>{value}</span>
-      <span className="text-[9px] font-semibold uppercase tracking-widest mt-0.5" style={{ color: "rgba(245,158,11,0.50)" }}>{label}</span>
+    <div className="flex flex-col items-center rounded-2xl border px-4 py-3" style={{
+      borderColor: highlight ? "rgba(52,211,153,0.30)" : "rgba(245,158,11,0.15)",
+      background: highlight ? "rgba(52,211,153,0.06)" : "rgba(245,158,11,0.05)",
+    }}>
+      <span className="text-lg font-black leading-none" style={{
+        ...PIRATA,
+        background: highlight ? "linear-gradient(135deg,#2dd4bf,#22c55e)" : "linear-gradient(135deg,#f59e0b,#fde68a)",
+        WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+      }}>{value}</span>
+      <span className="text-[9px] font-semibold uppercase tracking-widest mt-0.5" style={{
+        color: highlight ? "rgba(52,211,153,0.60)" : "rgba(245,158,11,0.50)",
+      }}>{label}</span>
     </div>
   );
 }
@@ -40,11 +70,26 @@ function OceanBg() {
   );
 }
 
+function SectionHeader({ icon, children }: { icon: React.ReactNode; children: string }) {
+  return (
+    <div className="flex items-center gap-3 mb-5">
+      <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(245,158,11,0.22), transparent)" }} />
+      <div className="flex items-center gap-2 shrink-0">
+        {icon}
+        <h2 className="text-[10px] font-black uppercase tracking-[0.18em] text-amber/40" style={NUNITO}>{children}</h2>
+      </div>
+      <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(245,158,11,0.22), transparent)" }} />
+    </div>
+  );
+}
+
+// ----- Bento Cards (kept from original) -----
+
 function CardGettingStarted({ style }: { style?: React.CSSProperties }) {
   return (
-    <Link to="/getting-started" className="group relative flex flex-col justify-between overflow-hidden rounded-2xl h-full" style={{ minHeight: 260, border: "1px solid rgba(245,158,11,0.20)", ...style }}>
+    <Link href="/guide" className="group relative flex flex-col justify-between overflow-hidden rounded-2xl h-full" style={{ minHeight: 260, border: "1px solid rgba(245,158,11,0.20)", ...style }}>
       <div className="absolute inset-0">
-        <ImageWithFallback src={gameImage} alt="" className="h-full w-full object-cover object-top" />
+        <ImageWithFallback src={gameImage} alt="Don't Sleep With The Fishes game cover art" className="h-full w-full object-cover object-top" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(160deg, rgba(4,8,15,0.92) 0%, rgba(4,8,15,0.75) 50%, rgba(4,8,15,0.55) 100%)" }} />
       </div>
       <div className="pointer-events-none absolute -bottom-10 -right-10 h-52 w-52" style={{ background: "radial-gradient(circle, rgba(245,158,11,0.22) 0%, transparent 65%)", filter: "blur(20px)" }} />
@@ -54,8 +99,8 @@ function CardGettingStarted({ style }: { style?: React.CSSProperties }) {
             <span className="h-1.5 w-1.5 rounded-full bg-amber animate-pulse" />
             <span className="text-[9px] font-black uppercase tracking-[0.18em] text-amber" style={NUNITO}>Start Here</span>
           </div>
-          <h3 className="mb-3 leading-tight text-text-primary group-hover:text-amber transition-colors duration-200" style={{ ...PIRATA, fontSize: "clamp(1.6rem, 3vw, 2.1rem)" }}>Getting Started</h3>
-          <p className="text-xs leading-relaxed text-text-secondary max-w-xs" style={NUNITO}>Controls, core mechanics, evacuation strategy, and everything you need before your first night at sea.</p>
+          <h3 className="mb-3 leading-tight text-text-primary group-hover:text-amber transition-colors duration-200" style={{ ...PIRATA, fontSize: "clamp(1.6rem, 3vw, 2.1rem)" }}>Beginner Guide</h3>
+          <p className="text-xs leading-relaxed text-text-secondary max-w-xs" style={NUNITO}>Controls, core mechanics, evacuation strategy, and everything you need before your first night at sea. Updated for v1.1.2.</p>
         </div>
         <div className="mt-6 inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-black transition-all duration-200 group-hover:gap-3 w-fit" style={{ ...NUNITO, background: "linear-gradient(135deg, #f59e0b, #d97706)", color: "#04080f", boxShadow: "0 4px 20px rgba(245,158,11,0.30)" }}>
           Begin Guide <ArrowRight className="h-3.5 w-3.5" />
@@ -67,7 +112,7 @@ function CardGettingStarted({ style }: { style?: React.CSSProperties }) {
 
 function CardWalkthrough({ style }: { style?: React.CSSProperties }) {
   return (
-    <Link to="/walkthrough" className="group relative flex flex-col justify-between overflow-hidden rounded-2xl h-full" style={{ background: "rgba(9,14,26,1)", border: "1px solid rgba(245,158,11,0.12)", ...style }}>
+    <Link href="/walkthrough" className="group relative flex flex-col justify-between overflow-hidden rounded-2xl h-full" style={{ background: "rgba(9,14,26,1)", border: "1px solid rgba(245,158,11,0.12)", ...style }}>
       <div className="absolute left-0 top-0 bottom-0 w-0.5" style={{ background: "linear-gradient(to bottom, transparent 5%, rgba(245,158,11,0.55) 30%, rgba(245,158,11,0.80) 50%, rgba(245,158,11,0.55) 70%, transparent 95%)" }} />
       <div className="pointer-events-none absolute top-0 inset-x-0 h-24" style={{ background: "linear-gradient(to bottom, rgba(245,158,11,0.05), transparent)" }} />
       <div className="relative p-5 flex flex-col h-full">
@@ -77,10 +122,10 @@ function CardWalkthrough({ style }: { style?: React.CSSProperties }) {
             <Map className="h-5 w-5 text-amber" />
           </div>
           <h3 className="mb-1.5 text-text-primary group-hover:text-amber transition-colors" style={{ ...PIRATA, fontSize: "1.2rem" }}>Walkthrough</h3>
-          <p className="text-xs text-text-tertiary leading-relaxed" style={NUNITO}>Ship to rescue — complete step-by-step</p>
+          <p className="text-xs text-text-tertiary leading-relaxed" style={NUNITO}>Day-by-day survival route to rescue</p>
         </div>
         <div className="mt-5 flex items-center justify-between">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-amber/40" style={NUNITO}>Full Guide</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest text-amber/40" style={NUNITO}>Spoiler-Aware</span>
           <ChevronRight className="h-4 w-4 text-amber/30 group-hover:text-amber group-hover:translate-x-0.5 transition-all" />
         </div>
       </div>
@@ -90,7 +135,7 @@ function CardWalkthrough({ style }: { style?: React.CSSProperties }) {
 
 function CardItems({ style }: { style?: React.CSSProperties }) {
   return (
-    <Link to="/items" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between transition-all duration-200"
+    <Link href="/items" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between transition-all duration-200"
       style={{ background: "rgba(6,11,22,1)", border: "1px solid rgba(30,50,90,1)", ...style }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(56,96,160,0.50)"; (e.currentTarget as HTMLElement).style.background = "rgba(9,15,30,1)"; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(30,50,90,1)"; (e.currentTarget as HTMLElement).style.background = "rgba(6,11,22,1)"; }}>
@@ -102,8 +147,8 @@ function CardItems({ style }: { style?: React.CSSProperties }) {
         <span className="rounded-full px-2 py-0.5 text-[9px] font-black" style={{ ...NUNITO, background: "rgba(40,70,140,0.20)", color: "rgba(147,197,253,0.90)", border: "1px solid rgba(56,96,180,0.25)" }}>35+ items</span>
       </div>
       <div>
-        <h3 className="mb-0.5 text-text-primary group-hover:text-blue-300 transition-colors" style={{ ...PIRATA, fontSize: "1.05rem" }}>Items Database</h3>
-        <p className="text-[11px] text-text-muted leading-relaxed" style={NUNITO}>Weight, uses &amp; strategy</p>
+        <h3 className="mb-0.5 text-text-primary group-hover:text-blue-300 transition-colors" style={{ ...PIRATA, fontSize: "1.05rem" }}>Items Guide</h3>
+        <p className="text-[11px] text-text-muted leading-relaxed" style={NUNITO}>Uses, sources &amp; best picks</p>
       </div>
     </Link>
   );
@@ -111,7 +156,7 @@ function CardItems({ style }: { style?: React.CSSProperties }) {
 
 function CardEndings({ style }: { style?: React.CSSProperties }) {
   return (
-    <Link to="/endings" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between transition-all duration-200"
+    <Link href="/endings" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between transition-all duration-200"
       style={{ background: "rgba(14,6,6,1)", border: "1px solid rgba(100,30,30,0.50)", ...style }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(180,40,40,0.50)"; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(100,30,30,0.50)"; }}>
@@ -132,7 +177,7 @@ function CardEndings({ style }: { style?: React.CSSProperties }) {
       </div>
       <div>
         <h3 className="mb-0.5 group-hover:text-red-400 transition-colors" style={{ ...PIRATA, fontSize: "1.1rem", color: "rgba(252,165,165,0.95)" }}>Endings Guide</h3>
-        <p className="text-[11px] text-text-muted leading-relaxed" style={NUNITO}>12+ outcomes — survival, death &amp; secrets</p>
+        <p className="text-[11px] text-text-muted leading-relaxed" style={NUNITO}>12+ outcomes — rescue, death &amp; secrets</p>
       </div>
     </Link>
   );
@@ -140,7 +185,7 @@ function CardEndings({ style }: { style?: React.CSSProperties }) {
 
 function CardEvents({ style }: { style?: React.CSSProperties }) {
   return (
-    <Link to="/events" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between transition-all duration-200"
+    <Link href="/events" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between transition-all duration-200"
       style={{ background: "rgba(14,10,4,1)", border: "1px solid rgba(120,80,10,0.50)", ...style }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.45)"; (e.currentTarget as HTMLElement).style.background = "rgba(18,13,5,1)"; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(120,80,10,0.50)"; (e.currentTarget as HTMLElement).style.background = "rgba(14,10,4,1)"; }}>
@@ -152,7 +197,7 @@ function CardEvents({ style }: { style?: React.CSSProperties }) {
       </div>
       <div>
         <h3 className="mb-0.5 text-amber/90 group-hover:text-amber transition-colors" style={{ ...PIRATA, fontSize: "1.05rem" }}>Events Guide</h3>
-        <p className="text-[11px] text-text-muted leading-relaxed" style={NUNITO}>Night encounters &amp; survival</p>
+        <p className="text-[11px] text-text-muted leading-relaxed" style={NUNITO}>Night event counters &amp; survival</p>
       </div>
     </Link>
   );
@@ -168,7 +213,7 @@ function CardSmall({ href, icon, title, desc, accent = "amber", style }: {
     grey:  { border: "rgba(15,25,48,1)", hoverBorder: "rgba(60,80,110,0.50)",   iconBg: "rgba(40,55,80,0.20)",    iconBorder: "rgba(50,70,100,0.25)",   iconColor: "#7a92aa" },
   }[accent];
   return (
-    <Link to={href} className="group relative overflow-hidden rounded-2xl p-4 flex flex-col gap-3 transition-all duration-200"
+    <Link href={href} className="group relative overflow-hidden rounded-2xl p-4 flex flex-col gap-3 transition-all duration-200"
       style={{ background: "rgba(8,13,24,1)", border: `1px solid ${colors.border}`, ...style }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = colors.hoverBorder; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = colors.border; }}>
@@ -196,9 +241,9 @@ function BentoLayout() {
         <div style={{ minHeight: 110 }}><CardItems /></div>
         <div style={{ minHeight: 110 }}><CardEndings /></div>
         <div style={{ minHeight: 110 }}><CardEvents /></div>
-        <CardSmall href="/achievements" icon={<Target />} title="Achievements" desc="Full unlock conditions" accent="amber" />
-        <CardSmall href="/tips-tricks" icon={<Lightbulb />} title="Tips & Tricks" desc="Advanced strategies" accent="teal" />
-        <CardSmall href="/faq" icon={<HelpCircle />} title="FAQ" desc="Quick answers" accent="grey" />
+        <CardSmall href="/achievements" icon={<Target />} title="Achievements & Records" desc="Completion checklist & speedrun" accent="amber" />
+        <CardSmall href="/tips-tricks" icon={<Lightbulb />} title="Tips & Tricks" desc="Advanced strategies & best items" accent="teal" />
+        <CardSmall href="/faq" icon={<HelpCircle />} title="FAQ" desc="Steam, Mac, Mobile & more" accent="grey" />
       </motion.div>
     );
   }
@@ -210,45 +255,106 @@ function BentoLayout() {
       <div style={{ gridColumn: "1 / 2", gridRow: "3 / 4", minHeight: 120 }}><CardItems style={{ height: "100%" }} /></div>
       <div style={{ gridColumn: "2 / 4", gridRow: "3 / 4" }}><CardEndings style={{ height: "100%" }} /></div>
       <div style={{ gridColumn: "4 / 5", gridRow: "3 / 4" }}><CardEvents style={{ height: "100%" }} /></div>
-      <div style={{ gridColumn: "1 / 2", gridRow: "4 / 5" }}><CardSmall href="/achievements" icon={<Target />} title="Achievements" desc="Full unlock conditions" accent="amber" style={{ height: "100%" }} /></div>
-      <div style={{ gridColumn: "2 / 3", gridRow: "4 / 5" }}><CardSmall href="/tips-tricks" icon={<Lightbulb />} title="Tips & Tricks" desc="Advanced strategies" accent="teal" style={{ height: "100%" }} /></div>
-      <div style={{ gridColumn: "3 / 5", gridRow: "4 / 5" }}><CardSmall href="/faq" icon={<HelpCircle />} title="FAQ" desc="Common questions & quick answers" accent="grey" style={{ height: "100%" }} /></div>
+      <div style={{ gridColumn: "1 / 2", gridRow: "4 / 5" }}><CardSmall href="/achievements" icon={<Target />} title="Achievements & Records" desc="Completion checklist" accent="amber" style={{ height: "100%" }} /></div>
+      <div style={{ gridColumn: "2 / 3", gridRow: "4 / 5" }}><CardSmall href="/tips-tricks" icon={<Lightbulb />} title="Tips & Tricks" desc="Best items & survival tricks" accent="teal" style={{ height: "100%" }} /></div>
+      <div style={{ gridColumn: "3 / 5", gridRow: "4 / 5" }}><CardSmall href="/faq" icon={<HelpCircle />} title="FAQ" desc="Steam release, Mac, Mobile & download help" accent="grey" style={{ height: "100%" }} /></div>
     </motion.div>
   );
 }
 
+// ----- Structured Data -----
+
+function HomeSchema() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Don't Sleep With The Fishes",
+    "applicationCategory": "Game",
+    "gamePlatform": "Windows",
+    "genre": ["Survival", "Horror", "Point-and-click"],
+    "author": { "@type": "Person", "name": "DopplerGhost" },
+    "url": "https://dopplerghost.itch.io/dont-sleep-with-the-fishes",
+  };
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+  );
+}
+
+// ----- Main Export -----
+
 export function HomePage() {
   return (
     <>
-      <SEO title="Home" description="Complete survival guide and wiki for Don't Sleep With The Fishes — a survival horror game by DopplerGhost." keywords="don't sleep with the fishes, dswtf, survival horror, game guide, walkthrough, wiki, itch.io" />
+      <SEO
+        title="Guide & Wiki"
+        description="Complete Don't Sleep With The Fishes guide and wiki updated for v1.1.2. Learn all endings, true ending steps, item uses, night event counters, shipmates, achievements, Steam release info, and survival tips."
+       
+        ogType="website"
+      />
+      <HomeSchema />
+
       <div className="min-h-screen">
+
+        {/* ===== HERO ===== */}
         <section className="relative overflow-hidden" style={{ minHeight: "520px" }}>
           <OceanBg />
           <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block" style={{ width: "42%" }}>
-            <ImageWithFallback src={gameImage} alt="" className="h-full w-full object-cover object-top" />
+            <ImageWithFallback src={gameImage} alt="Don't Sleep With The Fishes game cover art by DopplerGhost" className="h-full w-full object-cover object-top" />
             <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #04080f 0%, rgba(4,8,15,0.82) 28%, rgba(4,8,15,0.35) 65%, rgba(4,8,15,0.10) 100%)" }} />
             <div className="absolute inset-x-0 top-0 h-20" style={{ background: "linear-gradient(to bottom, #04080f, transparent)" }} />
             <div className="absolute inset-x-0 bottom-0 h-28" style={{ background: "linear-gradient(to top, #04080f, transparent)" }} />
           </div>
+
           <div className="relative mx-auto max-w-5xl px-5 md:px-8 pt-16 pb-12 md:pt-24 md:pb-16">
             <motion.div className="max-w-xl" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>
-              <div className="mb-6 flex items-center gap-3">
-                <div className="flex h-7 w-7 items-center justify-center rounded-lg" style={{ background: "rgba(245,158,11,0.10)", border: "1px solid rgba(245,158,11,0.22)" }}>
-                  <Fish className="h-3.5 w-3.5 text-amber" />
+
+              {/* Badge row */}
+              <div className="mb-5 flex flex-wrap items-center gap-2.5">
+                <div className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1" style={{ background: "rgba(245,158,11,0.10)", border: "1px solid rgba(245,158,11,0.22)" }}>
+                  <Fish className="h-3 w-3 text-amber" />
+                  <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-amber/70" style={NUNITO}>Guide &amp; Wiki</span>
                 </div>
-                <span className="text-xs font-bold uppercase tracking-[0.18em] text-amber/65" style={NUNITO}>Survival Guide &amp; Wiki</span>
+                <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)", ...NUNITO }}>
+                  <Sparkles className="h-3 w-3" /> v1.1.2 Updated
+                </span>
+                <span className="text-[10px] font-medium" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>Unofficial fan-made guide</span>
               </div>
-              <div className="mb-6 leading-none" style={PIRATA}>
-                <div className="text-text-primary" style={{ fontSize: "clamp(2.8rem, 7vw, 5rem)", textShadow: "0 0 40px rgba(245,158,11,0.14)" }}>Don't Sleep</div>
-                <div style={{ fontSize: "clamp(2.8rem, 7vw, 5rem)", background: "linear-gradient(135deg, #f59e0b 0%, #fde68a 40%, #d97706 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", filter: "drop-shadow(0 0 18px rgba(245,158,11,0.32))" }}>With The Fishes</div>
+
+              {/* H1 Title */}
+              <h1 className="mb-5 leading-none" style={PIRATA}>
+                <span className="block text-text-primary" style={{ fontSize: "clamp(2.6rem, 7vw, 4.8rem)", textShadow: "0 0 40px rgba(245,158,11,0.14)" }}>
+                  Don't Sleep{" "}
+                  <span style={{ background: "linear-gradient(135deg, #f59e0b 0%, #fde68a 40%, #d97706 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", filter: "drop-shadow(0 0 18px rgba(245,158,11,0.32))" }}>With The Fishes</span>
+                </span>
+                <span className="block mt-2" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", background: "linear-gradient(135deg, #7a92aa 0%, #bccfe0 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", fontWeight: 500 }}>Guide &amp; Wiki</span>
+              </h1>
+
+              {/* Subtitle */}
+              <p className="mb-6 text-sm leading-relaxed max-w-md" style={{ ...NUNITO, color: "rgba(122,146,170,1)" }}>
+                Survive every night event, choose the right items, unlock all outcomes, and find the safest route home. Complete unofficial survival guide updated for game version 1.1.2.
+              </p>
+
+              {/* Stats */}
+              <div className="mb-7 flex flex-wrap gap-2">
+                {stats.map((s, i) => <StatPill key={s.label} {...s} highlight={s.label === "Updated"} />)}
               </div>
-              <p className="mb-8 text-sm leading-relaxed max-w-sm" style={{ ...NUNITO, color: "rgba(122,146,170,1)" }}>You're adrift. The night is coming. Master every item, survive every event, and find a way home — or don't.</p>
-              <div className="mb-8 flex flex-wrap gap-2">
-                {stats.map(s => <StatPill key={s.label} {...s} />)}
-              </div>
+
+              {/* CTAs */}
               <div className="flex flex-wrap gap-3">
-                <Link to="/getting-started" className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-black transition-all hover:brightness-110"
+                <Link href="/guide" className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-black transition-all hover:brightness-110"
                   style={{ ...NUNITO, background: "linear-gradient(135deg,#f59e0b,#d97706)", color: "#04080f", boxShadow: "0 4px 24px rgba(245,158,11,0.28)" }}>Start the Guide</Link>
+                <Link href="/endings" className="inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-bold transition-all"
+                  style={{ ...NUNITO, borderColor: "rgba(245,158,11,0.22)", background: "rgba(245,158,11,0.06)", color: "#f59e0b" }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(245,158,11,0.12)"; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "rgba(245,158,11,0.06)"; }}>
+                  View All Endings
+                </Link>
+                <Link href="/events" className="inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-bold transition-all"
+                  style={{ ...NUNITO, borderColor: "rgba(245,158,11,0.22)", background: "rgba(245,158,11,0.06)", color: "#f59e0b" }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(245,158,11,0.12)"; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "rgba(245,158,11,0.06)"; }}>
+                  Event Counter Table
+                </Link>
                 <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-medium transition-all"
                   style={{ ...NUNITO, borderColor: "rgba(21,37,68,1)", background: "rgba(11,17,32,0.8)", color: "rgba(122,146,170,1)" }}
@@ -261,25 +367,112 @@ export function HomePage() {
           </div>
           <div className="absolute inset-x-0 bottom-0 h-14 pointer-events-none" style={{ background: "linear-gradient(to top, #04080f, transparent)" }} />
         </section>
+
+        {/* ===== INTRO TEXT ===== */}
+        <section className="px-5 md:px-8 pb-10">
+          <div className="mx-auto max-w-5xl">
+            <motion.div className="max-w-3xl" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }}>
+              <p className="text-sm leading-relaxed mb-3" style={{ color: "rgba(122,146,170,0.85)", ...NUNITO }}>
+                <strong className="text-text-primary">Don't Sleep With The Fishes</strong> is a point-and-click survival horror game by DopplerGhost. You're trapped on a sinking ship — quickly gather items, choose a shipmate, and survive the nights at sea. This guide focuses on <strong className="text-text-primary">practical routes, item counters, ending requirements, and v1.1.2 changes</strong> — with spoiler-free summaries available.
+              </p>
+              <p className="text-xs" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>
+                Platform: Windows &middot; Current version: v1.1.2 &middot; Official release: itch.io &middot; Steam port: planned by developer
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ===== BENTO GRID ===== */}
         <section className="px-5 md:px-8 pb-16 pt-2">
           <div className="mx-auto max-w-5xl">
-            <div className="mb-5 flex items-center gap-3">
-              <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(245,158,11,0.22), transparent)" }} />
-              <div className="flex items-center gap-2">
-                <Anchor className="h-3 w-3 text-amber/40" />
-                <span className="text-[10px] font-black uppercase tracking-[0.18em] text-amber/40" style={NUNITO}>Browse the Wiki</span>
-              </div>
-              <div className="h-px flex-1" style={{ background: "linear-gradient(to left, rgba(245,158,11,0.22), transparent)" }} />
-            </div>
+            <SectionHeader icon={<Anchor className="h-3 w-3 text-amber/40" />}>Browse the Wiki</SectionHeader>
             <BentoLayout />
           </div>
         </section>
+
+        {/* ===== EVENT COUNTER PREVIEW ===== */}
+        <section className="px-5 md:px-8 pb-10">
+          <div className="mx-auto max-w-5xl">
+            <SectionHeader icon={<Siren className="h-3 w-3 text-amber/40" />}>Night Event Counters</SectionHeader>
+            <motion.div className="overflow-x-auto" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
+              <table className="w-full text-left" style={{ borderCollapse: "collapse" }}>
+                <thead>
+                  <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                    <th className="py-2.5 pr-4 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Event</th>
+                    <th className="py-2.5 pr-4 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Best Counter</th>
+                    <th className="py-2.5 pr-4 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Search Intent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {eventPreview.map((row, i) => (
+                    <tr key={row.event} style={{ borderBottom: i < eventPreview.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}
+                      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(245,158,11,0.03)"; }}
+                      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}>
+                      <td className="py-3 pr-4">
+                        <div className="flex items-center gap-2.5">
+                          <span style={{ color: "rgba(245,158,11,0.5)" }}>{row.icon}</span>
+                          <Link href={row.href} className="text-sm font-bold text-text-primary hover:text-amber transition-colors" style={NUNITO}>{row.event}</Link>
+                        </div>
+                      </td>
+                      <td className="py-3 pr-4 text-sm text-text-secondary" style={NUNITO}>{row.bestPage}</td>
+                      <td className="py-3 pr-4 text-xs text-text-tertiary hidden sm:table-cell" style={NUNITO}>{row.intent}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </motion.div>
+            <div className="mt-4 text-right">
+              <Link href="/events" className="inline-flex items-center gap-1.5 text-xs font-bold text-amber/60 hover:text-amber transition-colors" style={NUNITO}>
+                Full Events Guide <ChevronRight className="h-3 w-3" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== ENDING PREVIEW ===== */}
+        <section className="px-5 md:px-8 pb-10">
+          <div className="mx-auto max-w-5xl">
+            <SectionHeader icon={<Trophy className="h-3 w-3 text-amber/40" />}>Endings Overview</SectionHeader>
+            <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.25 }}>
+              {endingPreview.map((item) => (
+                <Link
+                  key={item.type}
+                  href={item.href}
+                  className="group flex items-center gap-3 rounded-xl border px-4 py-3 transition-all duration-200"
+                  style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLElement).style.borderColor = `${item.accent}44`;
+                    (e.currentTarget as HTMLElement).style.background = "rgba(12,20,36,1)";
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)";
+                    (e.currentTarget as HTMLElement).style.background = "rgba(8,14,28,1)";
+                  }}
+                >
+                  <span className="h-2 w-2 rounded-full shrink-0" style={{ background: item.accent, boxShadow: `0 0 6px ${item.accent}44` }} />
+                  <div>
+                    <div className="text-sm font-bold text-text-primary group-hover:text-text-primary transition-colors" style={NUNITO}>{item.type}</div>
+                    <div className="text-[11px] text-text-tertiary" style={NUNITO}>{item.guide}</div>
+                  </div>
+                </Link>
+              ))}
+            </motion.div>
+            <div className="mt-4 text-right">
+              <Link href="/endings" className="inline-flex items-center gap-1.5 text-xs font-bold text-amber/60 hover:text-amber transition-colors" style={NUNITO}>
+                Full Endings Guide <ChevronRight className="h-3 w-3" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== FOOTER NOTE ===== */}
         <div className="border-t px-5 py-5 text-center" style={{ borderColor: "rgba(12,20,38,1)" }}>
           <p className="text-[11px]" style={{ color: "rgba(42,62,90,1)", ...NUNITO }}>
-            Fan-made wiki · Not affiliated with DopplerGhost ·{" "}
-            <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-amber/50">Official Game</a>
+            Unofficial fan-made guide &middot; Not affiliated with DopplerGhost &middot;{" "}
+            <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-amber/50">Official Game on itch.io</a>
           </p>
         </div>
+
       </div>
     </>
   );
