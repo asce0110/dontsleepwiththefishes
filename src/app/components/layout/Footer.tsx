@@ -186,6 +186,13 @@ export function Footer() {
             Built for survivors, adrift at sea
           </p>
         </div>
+
+        {/* Friend link */}
+        <div className="flex justify-center pb-6">
+          <a href="https://findly.tools/don-t-sleep-with-the-fishes?utm_source=don-t-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer">
+            <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" width="175" height="55" />
+          </a>
+        </div>
       </div>
     </footer>
   );
