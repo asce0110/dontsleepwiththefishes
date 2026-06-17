@@ -189,8 +189,8 @@ export function Header() {
                       filter: "drop-shadow(0 0 12px rgba(245,158,11,0.80))",
                     }}>{link.label}</span>
                   ) : (
-                    <span className="relative text-[0.72rem] font-bold transition-all duration-200 group-hover:scale-105"
-                      style={{ ...NUNITO, color: "var(--text-tertiary)" }}>
+                    <span className="relative text-[0.88rem] font-bold transition-all duration-200 group-hover:scale-105"
+                      style={{ ...NUNITO, color: "var(--text-secondary)" }}>
                       {link.label}
                     </span>
                   )}
@@ -282,7 +282,7 @@ export function Header() {
                           backgroundClip: "text",
                           filter: "drop-shadow(0 0 6px rgba(245,158,11,0.55))",
                         }}>{link.label}</span>
-                      : <span style={{ ...NUNITO, fontSize: "0.78rem", fontWeight: 700 }}>{link.label}</span>
+                      : <span style={{ ...NUNITO, fontSize: "0.9rem", fontWeight: 700 }}>{link.label}</span>
                     }
                   </Link>
                 );
