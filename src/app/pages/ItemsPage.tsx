@@ -47,7 +47,7 @@ const priorityColors: Record<string, { bg: string; border: string; color: string
 function PriorityBadge({ p }: { p: string }) {
   const c = priorityColors[p] || priorityColors.C;
   return (
-    <span className="inline-flex items-center justify-center rounded-md w-7 h-7 text-[11px] font-black" style={{ background: c.bg, border: `1px solid ${c.border}`, color: c.color }}>
+    <span className="inline-flex items-center justify-center rounded-md w-7 h-7 text-xs font-black" style={{ background: c.bg, border: `1px solid ${c.border}`, color: c.color }}>
       {p}
     </span>
   );
@@ -67,9 +67,9 @@ export function ItemsPage() {
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>
               <Package className="h-3.5 w-3.5 text-amber" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber">Items Database</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber">Items Database</span>
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
+            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
               <Sparkles className="h-3 w-3" /> v1.1.2
             </span>
           </div>
@@ -116,13 +116,13 @@ export function ItemsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 700 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Item</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Source</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Best Use</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Event Counter</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden lg:table-cell" style={NUNITO}>Ending Use</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Pri</th>
-                  <th className="py-2.5 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Source</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Item</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Source</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Best Use</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Event Counter</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden lg:table-cell" style={NUNITO}>Ending Use</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Pri</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Source</th>
                 </tr>
               </thead>
               <tbody>
@@ -135,7 +135,7 @@ export function ItemsPage() {
                       <div>
                         <span className="text-sm font-bold text-text-primary" style={NUNITO}>{row.item}</span>
                         {row.v112Change && (
-                          <span className="block text-[10px] mt-0.5" style={{ color: "rgba(52,211,153,0.7)" }}>{row.v112Change}</span>
+                          <span className="block text-xs mt-0.5" style={{ color: "rgba(52,211,153,0.7)" }}>{row.v112Change}</span>
                         )}
                       </div>
                     </td>
@@ -207,7 +207,7 @@ export function ItemsPage() {
 
         {/* Related links */}
         <div className="mt-8">
-          <h2 className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</h2>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             {[
               { href: "/events", label: "Events Guide", desc: "Night event counters & best items" },

@@ -30,13 +30,13 @@ export function GettingStartedPage() {
         description="Don't Sleep With The Fishes beginner guide: controls, core mechanics, evacuation strategy, shipmate choices, and first 7 days survival route. Updated for v1.1.2."
        
       />
-      <div className="mx-auto max-w-3xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber">Beginner Guide</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber">Beginner Guide</span>
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
+            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
               <Sparkles className="h-3 w-3" /> v1.1.2
             </span>
           </div>
@@ -121,8 +121,8 @@ export function GettingStartedPage() {
               ].map((mate) => (
                 <div key={mate.name} className="rounded-xl border p-3" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}>
                   <div className="text-sm font-bold text-text-primary mb-0.5">{mate.name}</div>
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-amber/60 mb-1">{mate.role}</div>
-                  <div className="text-[11px] text-text-tertiary leading-relaxed">{mate.effect}</div>
+                  <div className="text-xs font-bold uppercase tracking-wider text-amber/60 mb-1">{mate.role}</div>
+                  <div className="text-xs text-text-tertiary leading-relaxed">{mate.effect}</div>
                 </div>
               ))}
             </div>
@@ -145,7 +145,7 @@ export function GettingStartedPage() {
             </ul>
           </InfoCard>
           <div className="pt-2">
-            <h2 className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Next Guides</h2>
+            <h2 className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Next Guides</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
               {[
                 { href: "/items",       label: "Items Database",  desc: "All available items" },

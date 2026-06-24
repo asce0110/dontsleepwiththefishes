@@ -16,15 +16,15 @@ export function WalkthroughPage() {
         description="Don't Sleep With The Fishes walkthrough: day-by-day survival route from ship evacuation to rescue. Spoiler-aware with beginner-friendly paths. Updated for v1.1.2."
        
       />
-      <div className="mx-auto max-w-3xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>
               <Map className="h-3.5 w-3.5 text-amber" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber">Walkthrough</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber">Walkthrough</span>
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
+            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
               <Sparkles className="h-3 w-3" /> v1.1.2
             </span>
           </div>
@@ -196,7 +196,7 @@ export function WalkthroughPage() {
 
         {/* Related links */}
         <div className="mt-8">
-          <h2 className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</h2>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             {[
               { href: "/guide", label: "Beginner Guide", desc: "First-playthrough essentials" },

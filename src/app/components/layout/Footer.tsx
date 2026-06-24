@@ -1,5 +1,8 @@
+"use client";
+
 import { ExternalLink, Fish, Anchor, Waves } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const quickLinks = [
   { label: "Getting Started", href: "/guide" },
@@ -73,7 +76,18 @@ function FooterBubbles() {
 }
 
 export function Footer() {
+  const pathname = usePathname();
+  const isZh = pathname.startsWith("/zh");
   const year = new Date().getFullYear();
+
+  const links = isZh
+    ? quickLinks.map(l => ({...l, href: "/zh" + l.href, label: ({"Getting Started":"新手指南","Walkthrough":"流程攻略","Items Database":"物品数据库","Endings Guide":"结局攻略","FAQ":"常见问题","Changelog":"更新日志"} as Record<string,string>)[l.label] || l.label}))
+    : quickLinks;
+
+  const homeHref = isZh ? "/zh" : "/";
+  const zhFooterText = isZh
+    ? { guide: "Don't Sleep With The Fishes 粉丝攻略站。与 DopplerGhost 无关。", play: "在 itch.io 游玩", quickLinks: "快速链接", resources: "资源", official: "官方游戏", about: "关于本站", nowOn: "现已上线", copyright: "DSWTF Wiki — 粉丝制作，与 DopplerGhost 无关" }
+    : { guide: "A fan-made survival guide for Don't Sleep With The Fishes. Not affiliated with DopplerGhost. Made by survivors, for survivors.", play: "Play on itch.io", quickLinks: "Quick Links", resources: "Resources", official: "Official Game", about: "About This Wiki", nowOn: "Now on", copyright: `© ${year} DSWTF Wiki — Fan-made, not affiliated with DopplerGhost` };
 
   return (
     <footer className="relative border-t" style={{ borderColor: "rgba(15,31,56,0.8)", background: "linear-gradient(to bottom, rgba(5,10,20,1), rgba(4,8,15,1))" }}>
@@ -86,16 +100,15 @@ export function Footer() {
 
           {/* Brand column */}
           <div className="sm:col-span-5">
-            <Link href="/" className="group inline-flex items-center gap-2.5 mb-4">
+            <Link href={homeHref} className="group inline-flex items-center gap-2.5 mb-4">
               <div className="flex h-9 w-9 items-center justify-center rounded-xl transition-all duration-300"
                 style={{ background: "rgba(245,158,11,0.10)", border: "1px solid rgba(245,158,11,0.18)" }}>
                 <Fish className="h-[17px] w-[17px] text-amber transition-transform duration-300 group-hover:scale-110" />
               </div>
               <span className="text-lg text-text-primary" style={{ fontFamily: "'Fredoka', sans-serif", fontWeight: 600, letterSpacing: "0.02em" }}>DSWTF Wiki</span>
             </Link>
-            <p className="text-xs leading-relaxed mb-5 max-w-xs" style={{ color: "rgba(122,146,170,0.7)" }}>
-              A fan-made survival guide for <strong className="text-text-secondary">Don't Sleep With The Fishes</strong>.
-              Not affiliated with DopplerGhost. Made by survivors, for survivors.
+            <p className="text-xs leading-relaxed mb-5 max-w-xs" style={{ color: "rgba(188,207,230,0.7)" }}>
+              {zhFooterText.guide}
             </p>
             <a
               href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes"
@@ -113,7 +126,7 @@ export function Footer() {
               }}
             >
               <ExternalLink className="h-3 w-3" />
-              Play on itch.io
+              {zhFooterText.play}
             </a>
           </div>
 
@@ -121,15 +134,15 @@ export function Footer() {
           <div className="sm:col-span-4">
             <div className="flex items-center gap-2 mb-4">
               <Anchor className="h-3 w-3 text-amber/40" />
-              <span className="text-[10px] font-black uppercase tracking-[0.18em] text-amber/50">Quick Links</span>
+              <span className="text-xs font-black uppercase tracking-[0.18em] text-amber/60">{zhFooterText.quickLinks}</span>
             </div>
             <ul className="space-y-1.5">
-              {quickLinks.map((link) => (
+              {links.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
                     className="group flex items-center gap-2.5 py-1.5 text-xs transition-colors duration-150"
-                    style={{ color: "rgba(122,146,170,0.65)" }}
+                    style={{ color: "rgba(188,207,230,0.7)" }}
                   >
                     <span className="h-px w-0 group-hover:w-3 transition-all duration-200 rounded-full" style={{ background: "rgba(245,158,11,0.50)" }} />
                     <span className="group-hover:text-amber/80 transition-colors duration-150">{link.label}</span>
@@ -143,29 +156,29 @@ export function Footer() {
           <div className="sm:col-span-3">
             <div className="flex items-center gap-2 mb-4">
               <Waves className="h-3 w-3 text-teal/40" />
-              <span className="text-[10px] font-black uppercase tracking-[0.18em] text-teal/40">Resources</span>
+              <span className="text-xs font-black uppercase tracking-[0.18em] text-teal/55">{zhFooterText.resources}</span>
             </div>
             <ul className="space-y-1.5">
               <li>
                 <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer"
                   className="group flex items-center gap-2 py-1.5 text-xs transition-colors duration-150"
-                  style={{ color: "rgba(122,146,170,0.65)" }}>
+                  style={{ color: "rgba(188,207,230,0.7)" }}>
                   <ExternalLink className="h-3 w-3 shrink-0 group-hover:text-amber/60 transition-colors" />
-                  <span className="group-hover:text-amber/80 transition-colors">Official Game</span>
+                  <span className="group-hover:text-amber/80 transition-colors">{zhFooterText.official}</span>
                 </a>
               </li>
               <li>
                 <a href="https://itch.io" target="_blank" rel="noopener noreferrer"
                   className="group flex items-center gap-2 py-1.5 text-xs transition-colors duration-150"
-                  style={{ color: "rgba(122,146,170,0.65)" }}>
+                  style={{ color: "rgba(188,207,230,0.7)" }}>
                   <ExternalLink className="h-3 w-3 shrink-0 group-hover:text-amber/60 transition-colors" />
                   <span className="group-hover:text-amber/80 transition-colors">itch.io</span>
                 </a>
               </li>
               <li className="pt-3 mt-3 border-t" style={{ borderColor: "rgba(15,31,56,0.6)" }}>
-                <Link href="/about" className="group flex items-center gap-2 py-1.5 text-xs transition-colors duration-150"
-                  style={{ color: "rgba(122,146,170,0.65)" }}>
-                  <span className="group-hover:text-amber/80 transition-colors">About This Wiki</span>
+                <Link href={isZh ? "/zh/about" : "/about"} className="group flex items-center gap-2 py-1.5 text-xs transition-colors duration-150"
+                  style={{ color: "rgba(188,207,230,0.7)" }}>
+                  <span className="group-hover:text-amber/80 transition-colors">{zhFooterText.about}</span>
                 </Link>
               </li>
             </ul>
@@ -177,13 +190,16 @@ export function Footer() {
           style={{ borderTop: "1px solid rgba(15,31,56,0.5)" }}>
           <div className="flex items-center gap-2">
             <span className="h-1 w-1 rounded-full bg-amber/30" />
-            <p className="text-[11px]" style={{ color: "rgba(42,62,90,0.8)" }}>
-              &copy; {year} DSWTF Wiki &mdash; Fan-made, not affiliated with DopplerGhost
+            <p className="text-xs" style={{ color: "rgba(122,146,170,0.75)" }}>
+              {isZh ? `DSWTF Wiki — 粉丝制作，与 DopplerGhost 无关` : `© ${year} DSWTF Wiki — Fan-made, not affiliated with DopplerGhost`}
             </p>
           </div>
-          <p className="text-[11px] flex items-center gap-1.5" style={{ color: "rgba(42,62,90,0.8)" }}>
+          <p className="text-xs flex items-center gap-1.5" style={{ color: "rgba(122,146,170,0.75)" }}>
             <span className="inline-block h-1 w-1 rounded-full" style={{ background: "rgba(245,158,11,0.30)" }} />
-            Built for survivors, adrift at sea
+            {isZh ? "现已上线" : "Now on"}{" "}
+            <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="hover:text-amber/60 transition-colors">itch.io</a>
+            {" "}&amp;{" "}
+            <a href="https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400/60 transition-colors">Steam</a>
           </p>
         </div>
 

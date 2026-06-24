@@ -30,14 +30,14 @@ export function SeagullPage() {
         description="Learn how the Seagull event works in Don't Sleep With The Fishes, whether to feed or shoo seagulls, and how to avoid the seagull bad ending."
        
       />
-      <div className="mx-auto max-w-3xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>
               <Skull className="h-3.5 w-3.5 text-amber" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber">Night Event</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber">Night Event</span>
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
+            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
               <Sparkles className="h-3 w-3" /> v1.1.2
             </span>
             <SourceBadge source="Community" />
@@ -55,10 +55,10 @@ export function SeagullPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 550 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Choice</th>
-                    <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Outcome</th>
-                    <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Use When</th>
-                    <th className="py-2.5 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
+                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Choice</th>
+                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Outcome</th>
+                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Use When</th>
+                    <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -106,7 +106,7 @@ export function SeagullPage() {
         </div>
 
         <div className="mt-8">
-          <div className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</div>
+          <div className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             {[
               { href: "/endings", label: "Endings Guide", desc: "All outcomes including bad endings" },

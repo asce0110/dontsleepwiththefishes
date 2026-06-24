@@ -91,16 +91,16 @@ export function AchievementsPage() {
       <SEO title="Achievements & Records" description="" />
       <AchievementsFAQSchema />
 
-      <div className="mx-auto max-w-4xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
 
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>
               <Trophy className="h-3.5 w-3.5 text-amber" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber">Completion Tracker</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber">Completion Tracker</span>
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
+            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
               <Sparkles className="h-3 w-3" /> v1.1.2
             </span>
           </div>
@@ -125,9 +125,9 @@ export function AchievementsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Feature</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Current Status</th>
-                  <th className="py-2.5 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Feature</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Current Status</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
                 </tr>
               </thead>
               <tbody>
@@ -150,11 +150,11 @@ export function AchievementsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 650 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Goal</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Category</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>How to Track</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Guide</th>
-                  <th className="py-2.5 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Goal</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Category</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>How to Track</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Guide</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
                 </tr>
               </thead>
               <tbody>
@@ -184,10 +184,10 @@ export function AchievementsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 550 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Ending / Route</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Confirmed?</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Spoiler</th>
-                  <th className="py-2.5 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Guide</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Ending / Route</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Confirmed?</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Spoiler</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Guide</th>
                 </tr>
               </thead>
               <tbody>
@@ -213,7 +213,7 @@ export function AchievementsPage() {
             A public Steam achievement list is <strong className="text-text-primary">not available yet</strong>. The developer has said the next main goal is a Steam port, and a comment on the itch page mentions custom Steam achievements as a possible part of the port. Until the Steam page is live, this section tracks status only and does not list achievements as confirmed.
           </p>
           <div className="mt-2 flex items-center gap-2">
-            <SourceBadge source="Official" /> <span className="text-[9px] text-text-tertiary">Not released yet</span>
+            <SourceBadge source="Official" /> <span className="text-xs text-text-tertiary">Not released yet</span>
           </div>
         </InfoCard>
 
@@ -241,7 +241,7 @@ export function AchievementsPage() {
 
         {/* Related Guides */}
         <div className="mt-8">
-          <div className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</div>
+          <div className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             {[
               { href: "/endings", label: "Endings Guide", desc: "All outcomes & requirements" },

@@ -65,16 +65,16 @@ export function TipsAndTricksPage() {
       <SEO title="Tips & Tricks" description="" />
       <TipsFAQSchema />
 
-      <div className="mx-auto max-w-4xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
 
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>
               <Lightbulb className="h-3.5 w-3.5 text-amber" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber">Tips &amp; Tricks</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber">Tips &amp; Tricks</span>
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
+            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
               <Sparkles className="h-3 w-3" /> Updated for v1.1.2
             </span>
           </div>
@@ -91,9 +91,9 @@ export function TipsAndTricksPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Tip</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Why It Helps</th>
-                  <th className="py-2.5 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Tip</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Why It Helps</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
                 </tr>
               </thead>
               <tbody>
@@ -144,10 +144,10 @@ export function TipsAndTricksPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Shipmate</th>
-                    <th className="py-2 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Support Use</th>
-                    <th className="py-2 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Best Day Plan</th>
-                    <th className="py-2 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Shipmate</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Support Use</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Best Day Plan</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -195,7 +195,7 @@ export function TipsAndTricksPage() {
                 If you are trying for a rescue route, avoid wasting your Flare Gun. Community reports suggest using Flashlight first and saving Flare Gun for stronger rescue opportunities. Official v1.1.2 notes confirm rescue ending chance was slightly increased.
               </p>
               <div className="flex items-center gap-2">
-                <SourceBadge source="Community" /> <span className="text-[9px] text-text-tertiary">+ Official rescue chance update</span>
+                <SourceBadge source="Community" /> <span className="text-xs text-text-tertiary">+ Official rescue chance update</span>
               </div>
             </InfoCard>
 
@@ -213,7 +213,7 @@ export function TipsAndTricksPage() {
                 Chests can be valuable, but they are not free. Open them when you can afford the energy cost and when a missing utility item would improve your night-event coverage. Official v1.1.2 notes confirm Treasure Chest drop pool adjustments.
               </p>
               <div className="flex items-center gap-2">
-                <SourceBadge source="Community" /> <span className="text-[9px] text-text-tertiary">+ Official chest pool update</span>
+                <SourceBadge source="Community" /> <span className="text-xs text-text-tertiary">+ Official chest pool update</span>
               </div>
             </InfoCard>
           </div>
@@ -234,7 +234,7 @@ export function TipsAndTricksPage() {
 
         {/* Related Guides */}
         <div className="mt-8">
-          <div className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</div>
+          <div className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             {[
               { href: "/items", label: "Items Guide", desc: "Full item catalog & priority rankings" },

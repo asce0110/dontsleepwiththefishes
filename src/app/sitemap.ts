@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tips-tricks/", priority: 0.7, changefreq: "monthly" as const },
     { path: "/faq/", priority: 0.8, changefreq: "weekly" as const },
     { path: "/changelog/", priority: 0.6, changefreq: "weekly" as const },
+    { path: "/characters/", priority: 0.8, changefreq: "weekly" as const },
+    { path: "/steam/", priority: 0.9, changefreq: "weekly" as const },
     { path: "/about/", priority: 0.5, changefreq: "monthly" as const },
     { path: "/events/giant-squid/", priority: 0.8, changefreq: "monthly" as const },
     { path: "/events/seagull/", priority: 0.7, changefreq: "monthly" as const },

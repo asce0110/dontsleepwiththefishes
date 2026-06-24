@@ -31,14 +31,14 @@ export function RescuePage() {
         description="How to get rescued in Don't Sleep With The Fishes during the Hope event. Learn when to use the Flare Gun, Flashlight, and how rescue chance works in v1.1.2."
        
       />
-      <div className="mx-auto max-w-3xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(52,211,153,0.08)", border: "1px solid rgba(52,211,153,0.18)" }}>
               <ShieldCheck className="h-3.5 w-3.5" style={{ color: "rgba(52,211,153,0.9)" }} />
-              <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(52,211,153,0.9)" }}>Rescue Route</span>
+              <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(52,211,153,0.9)" }}>Rescue Route</span>
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
+            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
               <Sparkles className="h-3 w-3" /> v1.1.2
             </span>
             <SourceBadge source="Official" />
@@ -56,10 +56,10 @@ export function RescuePage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Item</th>
-                    <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>When to Use</th>
-                    <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Expected Result</th>
-                    <th className="py-2.5 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
+                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Item</th>
+                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>When to Use</th>
+                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Expected Result</th>
+                    <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -109,7 +109,7 @@ export function RescuePage() {
         </div>
 
         <div className="mt-8">
-          <div className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</div>
+          <div className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Guides</div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             {[
               { href: "/items", label: "Flare Gun", desc: "Item details & all uses" },

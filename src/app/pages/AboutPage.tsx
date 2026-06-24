@@ -66,16 +66,16 @@ export function AboutPage() {
       <SEO title="About This Wiki" description="" />
       <AboutSchema />
 
-      <div className="mx-auto max-w-3xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
 
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>
               <BookOpen className="h-3.5 w-3.5 text-amber" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber">About</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber">About</span>
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
+            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
               <Sparkles className="h-3 w-3" /> v1.1.2
             </span>
           </div>
@@ -123,8 +123,8 @@ export function AboutPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 450 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-[10px] font-black uppercase tracking-widest" style={{ color: "rgba(52,211,153,0.7)", ...NUNITO }}>This Wiki Does</th>
-                    <th className="py-2 text-[10px] font-black uppercase tracking-widest" style={{ color: "rgba(239,68,68,0.7)", ...NUNITO }}>This Wiki Does Not</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest" style={{ color: "rgba(52,211,153,0.7)", ...NUNITO }}>This Wiki Does</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest" style={{ color: "rgba(239,68,68,0.7)", ...NUNITO }}>This Wiki Does Not</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -149,9 +149,9 @@ export function AboutPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Label</th>
-                    <th className="py-2 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Meaning</th>
-                    <th className="py-2 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Example</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Label</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Meaning</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Example</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -193,8 +193,8 @@ export function AboutPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 350 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Page Type</th>
-                    <th className="py-2 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Priority</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Page Type</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Priority</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -220,8 +220,8 @@ export function AboutPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 400 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Level</th>
-                    <th className="py-2 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Meaning</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Level</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Meaning</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -289,7 +289,7 @@ export function AboutPage() {
 
         {/* Related Links */}
         <div className="mt-8">
-          <h2 className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Links</h2>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related Links</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             {[
               { href: "/guide", label: "Beginner Guide", desc: "Start here for your first playthrough" },

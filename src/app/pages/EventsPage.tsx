@@ -158,12 +158,12 @@ export function EventsPage() {
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>
               <AlertTriangle className="h-3.5 w-3.5 text-amber" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber">Events Database</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber">Events Database</span>
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
+            <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
               <Sparkles className="h-3 w-3" /> Updated for v1.1.2
             </span>
-            <span className="text-[10px] font-medium" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>Last verified: 2026-06-08</span>
+            <span className="text-xs font-medium" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>Last verified: 2026-06-08</span>
           </div>
           <h1 className="text-text-primary mb-3" style={{ fontFamily: "'Fredoka', sans-serif", fontWeight: 600, fontSize: "2rem", letterSpacing: "0.02em" }}>Don't Sleep With The Fishes Night Event Counters</h1>
 
@@ -176,8 +176,8 @@ export function EventsPage() {
 
           {/* Badges row */}
           <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: "rgba(245,158,11,0.55)" }}>Spoiler level: Medium</span>
-            <span className="text-[10px] text-text-tertiary">|</span>
+            <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "rgba(245,158,11,0.55)" }}>Spoiler level: Medium</span>
+            <span className="text-xs text-text-tertiary">|</span>
             <SourceBadge source="Official" />
             <SourceBadge source="Community" />
             <SourceBadge source="Unverified" />
@@ -209,12 +209,12 @@ export function EventsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 800 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Event</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Best Counter</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Backup</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden lg:table-cell" style={NUNITO}>Avoid</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden xl:table-cell" style={NUNITO}>Search Intent</th>
-                  <th className="py-2.5 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Event</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Best Counter</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Backup</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden lg:table-cell" style={NUNITO}>Avoid</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden xl:table-cell" style={NUNITO}>Search Intent</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
                 </tr>
               </thead>
               <tbody>
@@ -232,7 +232,7 @@ export function EventsPage() {
                     <td className="py-3 pr-3 text-xs text-text-secondary" style={NUNITO}>{row.bestCounter}</td>
                     <td className="py-3 pr-3 text-xs text-text-tertiary hidden md:table-cell" style={NUNITO}>{row.backup}</td>
                     <td className="py-3 pr-3 text-xs hidden lg:table-cell" style={{ color: "rgba(248,113,113,0.80)", ...NUNITO }}>{row.avoid}</td>
-                    <td className="py-3 pr-3 text-[10px] text-text-tertiary hidden xl:table-cell" style={NUNITO}>{row.searchIntent}</td>
+                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden xl:table-cell" style={NUNITO}>{row.searchIntent}</td>
                     <td className="py-3"><SourceBadge source={row.confidence} /></td>
                   </tr>
                 ))}
@@ -278,7 +278,7 @@ export function EventsPage() {
 
         {/* Deep dive links */}
         <div className="mt-10">
-          <h2 className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Event Detail Pages</h2>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Event Detail Pages</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
             {[
               { href: "/events/giant-squid", label: "Giant Squid Guide", desc: "Anchor, Pay Debt & True Ending route", icon: <Anchor className="h-3.5 w-3.5" /> },
@@ -295,7 +295,7 @@ export function EventsPage() {
                   <span style={{ color: "rgba(245,158,11,0.4)" }}>{icon}</span>
                   <div>
                     <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                    <div className="text-[11px] text-text-tertiary">{desc}</div>
+                    <div className="text-xs text-text-tertiary">{desc}</div>
                   </div>
                 </div>
                 <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
@@ -306,7 +306,7 @@ export function EventsPage() {
 
         {/* Related item links */}
         <div className="mt-6">
-          <h2 className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Key Items for Events</h2>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Key Items for Events</h2>
           <div className="flex flex-wrap gap-2">
             {[
               { href: "/items", label: "Anchor" },
@@ -316,7 +316,7 @@ export function EventsPage() {
               { href: "/items", label: "Bucket" },
               { href: "/items/heart-of-the-sea", label: "Heart of the Sea" },
             ].map(({ href, label }) => (
-              <Link key={label} href={href} className="rounded-full px-3 py-1 text-[10px] font-bold transition-all hover:brightness-110" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.15)", color: "rgba(245,158,11,0.75)", ...NUNITO }}>
+              <Link key={label} href={href} className="rounded-full px-3 py-1 text-xs font-bold transition-all hover:brightness-110" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.15)", color: "rgba(245,158,11,0.75)", ...NUNITO }}>
                 {label}
               </Link>
             ))}

@@ -1,6 +1,6 @@
 "use client";
 
-import { Fish, Menu, X, ChevronDown } from "lucide-react";
+import { Fish, Menu, X, ChevronDown, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -11,6 +11,7 @@ const NUNITO: React.CSSProperties = { fontFamily: "'Nunito', sans-serif" };
 const navLinks = [
   { label: "Guide",        href: "/guide" },
   { label: "Walkthrough",  href: "/walkthrough" },
+  { label: "Characters",   href: "/characters" },
   { label: "Items",        href: "/items" },
   { label: "Endings",      href: "/endings" },
   { label: "Events",       href: "/events" },
@@ -76,6 +77,7 @@ function WaveBorder() {
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const isZh = pathname.startsWith("/zh");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -83,6 +85,13 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const links = isZh
+    ? navLinks.map(l => ({ ...l, href: "/zh" + l.href, label: ({ "/guide": "新手指南", "/walkthrough": "流程攻略", "/characters": "角色", "/items": "物品", "/endings": "结局", "/events": "事件", "/achievements": "成就", "/tips-tricks": "技巧" } as Record<string,string>)[l.href] || l.label }))
+    : navLinks;
+
+  const langLink = isZh ? "/" : "/zh";
+  const langLabel = isZh ? "EN" : "中文";
 
   return (
     <header className="sticky top-0 z-50 w-full transition-shadow duration-300" style={{
@@ -166,7 +175,7 @@ export function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-0.5">
-            {navLinks.map((link) => {
+            {links.map((link) => {
               const active = pathname === link.href || pathname.startsWith(link.href + "/");
               return (
                 <Link
@@ -218,6 +227,10 @@ export function Header() {
                 </Link>
               );
             })}
+            <Link href={langLink} className="ml-3 flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-semibold transition hover:bg-white/5"
+              style={{ borderColor: "rgba(245,158,11,0.2)", color: "rgba(245,158,11,0.65)", ...NUNITO }}>
+              <Globe className="h-3 w-3" /> {langLabel}
+            </Link>
           </nav>
 
           {/* Mobile toggle */}
@@ -255,7 +268,7 @@ export function Header() {
               <span className="h-px flex-1" style={{ background: "linear-gradient(to left, transparent, rgba(245,158,11,0.20))" }} />
             </div>
             <div className="grid grid-cols-2 gap-2">
-              {navLinks.map((link) => {
+              {links.map((link) => {
                 const active = pathname === link.href;
                 return (
                   <Link

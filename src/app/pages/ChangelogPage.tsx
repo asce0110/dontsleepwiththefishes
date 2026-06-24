@@ -184,14 +184,14 @@ export function ChangelogPage() {
       <SEO title="Changelog" description="" />
       <ChangelogSchema />
 
-      <div className="mx-auto max-w-4xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
 
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>
               <Clock className="h-3.5 w-3.5 text-amber" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber">Changelog</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-amber">Changelog</span>
             </span>
           </div>
           <h1 className="text-text-primary mb-3" style={{ fontFamily: "'Fredoka', sans-serif", fontWeight: 600, fontSize: "2rem", letterSpacing: "0.02em" }}>Don't Sleep With The Fishes Wiki Changelog</h1>
@@ -204,19 +204,19 @@ export function ChangelogPage() {
         <InfoCard className="mb-6">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 text-sm" style={NUNITO}>
             <div>
-              <span className="block text-[9px] font-black uppercase tracking-widest text-text-tertiary mb-1">Game Version</span>
+              <span className="block text-xs font-black uppercase tracking-widest text-text-tertiary mb-1">Game Version</span>
               <span className="text-text-primary font-bold">v1.1.2</span>
             </div>
             <div>
-              <span className="block text-[9px] font-black uppercase tracking-widest text-text-tertiary mb-1">Last Wiki Review</span>
+              <span className="block text-xs font-black uppercase tracking-widest text-text-tertiary mb-1">Last Wiki Review</span>
               <span className="text-text-primary font-bold">2026-06-08</span>
             </div>
             <div>
-              <span className="block text-[9px] font-black uppercase tracking-widest text-text-tertiary mb-1">Source Labels</span>
+              <span className="block text-xs font-black uppercase tracking-widest text-text-tertiary mb-1">Source Labels</span>
               <span className="text-text-primary font-bold">Official &middot; Verified &middot; Community &middot; Unverified</span>
             </div>
             <div>
-              <span className="block text-[9px] font-black uppercase tracking-widest text-text-tertiary mb-1">Official Page</span>
+              <span className="block text-xs font-black uppercase tracking-widest text-text-tertiary mb-1">Official Page</span>
               <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-amber/80 hover:text-amber transition-colors font-bold">
                 itch.io <ExternalLink className="h-3 w-3" />
               </a>
@@ -236,8 +236,8 @@ export function ChangelogPage() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
-                    <span className="text-[10px] font-black tracking-wider" style={{ color: "rgba(122,146,170,0.6)", ...NUNITO }}>{entry.date}</span>
-                    <span className="rounded-full px-2 py-0.5 text-[9px] font-black uppercase tracking-wider" style={{ background: `${typeColors[entry.type]}22`, border: `1px solid ${typeColors[entry.type]}44`, color: typeColors[entry.type] }}>
+                    <span className="text-xs font-black tracking-wider" style={{ color: "rgba(122,146,170,0.6)", ...NUNITO }}>{entry.date}</span>
+                    <span className="rounded-full px-2 py-0.5 text-xs font-black uppercase tracking-wider" style={{ background: `${typeColors[entry.type]}22`, border: `1px solid ${typeColors[entry.type]}44`, color: typeColors[entry.type] }}>
                       {entry.type}
                     </span>
                   </div>
@@ -246,16 +246,16 @@ export function ChangelogPage() {
 
                   {/* Affected pages */}
                   <div className="flex flex-wrap items-center gap-1.5 mb-2">
-                    <span className="text-[9px] font-bold uppercase tracking-wider text-text-tertiary">Affected:</span>
+                    <span className="text-xs font-bold uppercase tracking-wider text-text-tertiary">Affected:</span>
                     {entry.affectedPages.map((page) => (
-                      <Link key={page.href} href={page.href} className="rounded-full px-2 py-0.5 text-[10px] font-bold transition-colors hover:text-amber" style={{ background: "rgba(245,158,11,0.06)", border: "1px solid rgba(245,158,11,0.12)", color: "rgba(245,158,11,0.65)", ...NUNITO }}>
+                      <Link key={page.href} href={page.href} className="rounded-full px-2 py-0.5 text-xs font-bold transition-colors hover:text-amber" style={{ background: "rgba(245,158,11,0.06)", border: "1px solid rgba(245,158,11,0.12)", color: "rgba(245,158,11,0.65)", ...NUNITO }}>
                         {page.label}
                       </Link>
                     ))}
                   </div>
 
                   {/* Source & Status */}
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] text-text-tertiary" style={NUNITO}>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-tertiary" style={NUNITO}>
                     <span>Source: <strong className="text-text-secondary">{entry.source}</strong></span>
                     <span>Status: <strong className="text-text-secondary">{entry.status}</strong></span>
                     {entry.officialLink && (
@@ -286,9 +286,9 @@ export function ChangelogPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Official Change</th>
-                  <th className="py-2.5 pr-3 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Affected Pages</th>
-                  <th className="py-2.5 text-[10px] font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Action</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Official Change</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Affected Pages</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -319,7 +319,7 @@ export function ChangelogPage() {
 
         {/* Related Links */}
         <div className="mt-8">
-          <div className="mb-4 text-[10px] font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related</div>
+          <div className="mb-4 text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(245,158,11,0.50)" }}>Related</div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             {[
               { href: "/about", label: "About This Wiki", desc: "Source confidence & policies" },

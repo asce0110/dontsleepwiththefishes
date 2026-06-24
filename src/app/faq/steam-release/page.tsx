@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { PlaceholderPage } from "../../pages/PlaceholderPage";
+import { SteamPage } from "../../pages/SteamPage";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "./" },
-  title: "Don't Sleep With The Fishes Steam Release FAQ",
-  description: "Track Steam port status, possible Steam achievements, itch buyer questions, release timing, and official update notes.",
+  alternates: { canonical: "/steam/" },
+  title: "Don't Sleep With The Fishes Steam Release FAQ — June 26, 2026",
+  description: "Steam release date, price, achievements, Steam Deck compatibility, itch.io vs Steam comparison, and whether itch buyers get a free Steam key.",
 };
 
-export default function Page() {
-  return <PlaceholderPage title="Steam Release FAQ" description="Planned Steam port, Steam key for itch buyers, release date, and achievements info." />;
-}
+export default SteamPage;
