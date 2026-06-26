@@ -103,28 +103,35 @@ export function SteamPage() {
           </div>
         </InfoCard>
 
-        {/* Game Trailer */}
+        {/* Game Trailers */}
         <div className="mb-8">
           <div className="flex items-center gap-2.5 mb-4">
             <span className="h-5 w-0.5 rounded-full bg-blue-400" />
-            <h2 className="text-base font-bold text-text-primary" style={NUNITO}>Official Trailer</h2>
+            <h2 className="text-base font-bold text-text-primary" style={NUNITO}>Official Trailers</h2>
           </div>
           <InfoCard>
-            <div className="relative overflow-hidden rounded-lg" style={{ background: "#000" }}>
-              <video
-                controls
-                poster="/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png"
-                preload="none"
-                className="w-full aspect-video"
-                style={{ maxHeight: "480px" }}
-              >
-                <source src="https://shared.cdn.queniuqe.com/store_item_assets/steam/apps/4834070/extras/b65b93df1bf498a032c16164e1282574.mp4?t=1782468658" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                { src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4834070/extras/b65b93df1bf498a032c16164e1282574.mp4?t=1782468658", label: "Gameplay Trailer" },
+                { src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4834070/extras/ebbe78bd8d6fbc86a51614906622ae97.mp4?t=1782468658", label: "Survival at Sea" },
+                { src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4834070/extras/b22d56a786e8bb9306686050e1a70bb9.mp4?t=1782468658", label: "Night Events" },
+              ].map(({ src, label }) => (
+                <div key={src} className="relative overflow-hidden rounded-lg" style={{ background: "#000" }}>
+                  <video
+                    controls
+                    loop
+                    muted
+                    poster="/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png"
+                    preload="none"
+                    className="w-full aspect-video"
+                    style={{ maxHeight: "360px" }}
+                  >
+                    <source src={src} type="video/mp4" />
+                  </video>
+                  <p className="mt-2 text-xs text-text-secondary" style={NUNITO}>{label}</p>
+                </div>
+              ))}
             </div>
-            <p className="mt-3 text-xs text-text-secondary" style={NUNITO}>
-              Don't Sleep With The Fishes — official Steam trailer. Point-and-click survival horror by DopplerGhost.
-            </p>
           </InfoCard>
         </div>
 

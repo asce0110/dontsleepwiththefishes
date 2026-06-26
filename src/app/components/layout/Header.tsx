@@ -17,6 +17,7 @@ const navLinks = [
   { label: "Events",       href: "/events" },
   { label: "Achievements", href: "/achievements" },
   { label: "Tips",         href: "/tips-tricks" },
+  { label: "Steam",        href: "/steam" },
 ];
 
 function Bubbles() {
