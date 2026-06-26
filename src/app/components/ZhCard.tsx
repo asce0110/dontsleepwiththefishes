@@ -7,7 +7,7 @@ const NUNITO: React.CSSProperties = { fontFamily: "'Nunito', sans-serif" };
 
 export function Card({ href, icon, title, desc }: { href: string; icon: React.ReactNode; title: string; desc: string }) {
   return (
-    <Link href={href} className="group flex items-start gap-3 rounded-xl border p-4 transition-all duration-200"
+    <Link href={href} className="group flex items-start gap-3 rounded-xl border p-4 active:scale-[0.98] transition-all duration-200"
       style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.28)"; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>

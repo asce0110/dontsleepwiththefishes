@@ -107,7 +107,7 @@ function CommunityPoll() {
               key={ch.name}
               onClick={() => castVote(ch.name)}
               disabled={!!voted}
-              className="group relative overflow-hidden rounded-xl border px-4 py-3 text-left transition-all duration-200"
+              className="group relative overflow-hidden rounded-xl border px-4 py-3 text-left active:scale-[0.98] transition-all duration-200"
               style={{
                 borderColor: voted === ch.name ? `${ch.accent}66` : voted ? "rgba(245,158,11,0.07)" : "rgba(245,158,11,0.09)",
                 background: voted === ch.name ? `${ch.accent}11` : "rgba(8,14,28,1)",
@@ -299,7 +299,7 @@ export function ZhCharactersPage() {
               { href: "/walkthrough", label: "流程攻略", desc: "按天生存路线", icon: <Anchor className="h-3.5 w-3.5" /> },
               { href: "/endings", label: "结局攻略", desc: "哪个船员适合哪个结局", icon: <Siren className="h-3.5 w-3.5" /> },
             ].map(({ href, label, desc, icon }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 active:scale-[0.98] transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div>

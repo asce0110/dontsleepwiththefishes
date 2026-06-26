@@ -198,7 +198,7 @@ export function Header() {
                       filter: "drop-shadow(0 0 12px rgba(245,158,11,0.80))",
                     }}>{link.label}</span>
                   ) : (
-                    <span className="relative text-[0.88rem] font-bold transition-all duration-200 group-hover:scale-105"
+                    <span className="relative text-[0.88rem] font-bold active:scale-[0.98] transition-all duration-200 group-hover:scale-105"
                       style={{ ...NUNITO, color: "var(--text-secondary)" }}>
                       {link.label}
                     </span>
@@ -235,7 +235,7 @@ export function Header() {
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden relative flex items-center gap-1.5 rounded-xl border px-3 py-2 transition-all duration-200"
+            className="lg:hidden relative flex items-center gap-1.5 rounded-xl border px-3 py-2 active:scale-[0.98] transition-all duration-200"
             style={{
               borderColor: mobileOpen ? "rgba(245,158,11,0.40)" : "rgba(15,25,48,1)",
               background: mobileOpen ? "rgba(245,158,11,0.10)" : "rgba(8,13,24,1)",
@@ -275,7 +275,7 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 rounded-xl px-4 py-3 transition-all duration-200"
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 active:scale-[0.98] transition-all duration-200"
                     style={active
                       ? { background: "rgba(245,158,11,0.10)", border: "1px solid rgba(245,158,11,0.28)", boxShadow: "0 0 12px rgba(245,158,11,0.08)" }
                       : { background: "rgba(8,13,24,1)", border: "1px solid rgba(15,25,48,1)", color: "var(--text-secondary)" }

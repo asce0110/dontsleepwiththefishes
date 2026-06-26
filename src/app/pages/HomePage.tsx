@@ -7,7 +7,7 @@ import {
   ExternalLink, Fish, ArrowRight, Anchor, ChevronRight, ShieldCheck,
   Skull, Star, Siren, Waves, Compass, Sparkles,
 } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import Link from "next/link";
 import { SteamCountdown } from "../components/steam-countdown";
 const gameImage = "/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png";
@@ -103,7 +103,7 @@ function CardGettingStarted({ style }: { style?: React.CSSProperties }) {
           <h3 className="mb-3 leading-tight text-text-primary group-hover:text-amber transition-colors duration-200" style={{ ...PIRATA, fontSize: "clamp(1.6rem, 3vw, 2.1rem)" }}>Beginner Guide</h3>
           <p className="text-xs leading-relaxed text-text-secondary max-w-xs" style={NUNITO}>Controls, core mechanics, evacuation strategy, and everything you need before your first night at sea. Updated for v1.1.2.</p>
         </div>
-        <div className="mt-6 inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-black transition-all duration-200 group-hover:gap-3 w-fit" style={{ ...NUNITO, background: "linear-gradient(135deg, #f59e0b, #d97706)", color: "#04080f", boxShadow: "0 4px 20px rgba(245,158,11,0.30)" }}>
+        <div className="mt-6 inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-black active:scale-[0.98] transition-all duration-200 group-hover:gap-3 w-fit" style={{ ...NUNITO, background: "linear-gradient(135deg, #f59e0b, #d97706)", color: "#04080f", boxShadow: "0 4px 20px rgba(245,158,11,0.30)" }}>
           Begin Guide <ArrowRight className="h-3.5 w-3.5" />
         </div>
       </div>
@@ -136,7 +136,7 @@ function CardWalkthrough({ style }: { style?: React.CSSProperties }) {
 
 function CardItems({ style }: { style?: React.CSSProperties }) {
   return (
-    <Link href="/items" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between transition-all duration-200"
+    <Link href="/items" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between active:scale-[0.98] transition-all duration-200"
       style={{ background: "rgba(6,11,22,1)", border: "1px solid rgba(30,50,90,1)", ...style }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(56,96,160,0.50)"; (e.currentTarget as HTMLElement).style.background = "rgba(9,15,30,1)"; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(30,50,90,1)"; (e.currentTarget as HTMLElement).style.background = "rgba(6,11,22,1)"; }}>
@@ -157,7 +157,7 @@ function CardItems({ style }: { style?: React.CSSProperties }) {
 
 function CardEndings({ style }: { style?: React.CSSProperties }) {
   return (
-    <Link href="/endings" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between transition-all duration-200"
+    <Link href="/endings" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between active:scale-[0.98] transition-all duration-200"
       style={{ background: "rgba(14,6,6,1)", border: "1px solid rgba(100,30,30,0.50)", ...style }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(180,40,40,0.50)"; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(100,30,30,0.50)"; }}>
@@ -186,7 +186,7 @@ function CardEndings({ style }: { style?: React.CSSProperties }) {
 
 function CardEvents({ style }: { style?: React.CSSProperties }) {
   return (
-    <Link href="/events" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between transition-all duration-200"
+    <Link href="/events" className="group relative overflow-hidden rounded-2xl p-4 flex flex-col justify-between active:scale-[0.98] transition-all duration-200"
       style={{ background: "rgba(14,10,4,1)", border: "1px solid rgba(120,80,10,0.50)", ...style }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.45)"; (e.currentTarget as HTMLElement).style.background = "rgba(18,13,5,1)"; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(120,80,10,0.50)"; (e.currentTarget as HTMLElement).style.background = "rgba(14,10,4,1)"; }}>
@@ -214,7 +214,7 @@ function CardSmall({ href, icon, title, desc, accent = "amber", style }: {
     grey:  { border: "rgba(15,25,48,1)", hoverBorder: "rgba(60,80,110,0.50)",   iconBg: "rgba(40,55,80,0.20)",    iconBorder: "rgba(50,70,100,0.25)",   iconColor: "#7a92aa" },
   }[accent];
   return (
-    <Link href={href} className="group relative overflow-hidden rounded-2xl p-4 flex flex-col gap-3 transition-all duration-200"
+    <Link href={href} className="group relative overflow-hidden rounded-2xl p-4 flex flex-col gap-3 active:scale-[0.98] transition-all duration-200"
       style={{ background: "rgba(8,13,24,1)", border: `1px solid ${colors.border}`, ...style }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = colors.hoverBorder; }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = colors.border; }}>
@@ -234,9 +234,10 @@ function CardSmall({ href, icon, title, desc, accent = "amber", style }: {
 
 function BentoLayout() {
   const isDesktop = useIsDesktop();
+  const reduce = useReducedMotion();
   if (!isDesktop) {
     return (
-      <motion.div className="flex flex-col gap-2.5" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
+      <motion.div className="flex flex-col gap-2.5" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
         <div style={{ minHeight: 280 }}><CardGettingStarted /></div>
         <div style={{ minHeight: 180 }}><CardWalkthrough /></div>
         <div style={{ minHeight: 110 }}><CardItems /></div>
@@ -249,7 +250,7 @@ function BentoLayout() {
     );
   }
   return (
-    <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.08 }}
+    <motion.div initial={reduce ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.08 }}
       style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gridTemplateRows: "repeat(4, auto)", gap: "10px" }}>
       <div style={{ gridColumn: "1 / 4", gridRow: "1 / 3", minHeight: 260 }}><CardGettingStarted style={{ height: "100%" }} /></div>
       <div style={{ gridColumn: "4 / 5", gridRow: "1 / 3" }}><CardWalkthrough style={{ height: "100%" }} /></div>
@@ -284,6 +285,7 @@ function HomeSchema() {
 // ----- Main Export -----
 
 export function HomePage() {
+  const reduce = useReducedMotion();
   return (
     <>
       <SEO
@@ -310,7 +312,7 @@ export function HomePage() {
           </div>
 
           <div className="relative mx-auto max-w-7xl px-5 md:px-8 pt-16 pb-12 md:pt-24 md:pb-16">
-            <motion.div className="max-w-xl" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>
+            <motion.div className="max-w-xl" initial={reduce ? false : { opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>
 
               {/* Badge row */}
               <div className="mb-5 flex flex-wrap items-center gap-2.5">
@@ -375,7 +377,7 @@ export function HomePage() {
         {/* ===== INTRO TEXT ===== */}
         <section className="px-5 md:px-8 pb-10">
           <div className="mx-auto max-w-7xl">
-            <motion.div className="max-w-3xl" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }}>
+            <motion.div className="max-w-3xl" initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }}>
               <p className="text-sm leading-relaxed mb-3" style={{ color: "rgba(122,146,170,0.85)", ...NUNITO }}>
                 <strong className="text-text-primary">Don't Sleep With The Fishes</strong> is a point-and-click survival horror game by DopplerGhost. You're trapped on a sinking ship — quickly gather items, choose a shipmate, and survive the nights at sea. This guide focuses on <strong className="text-text-primary">practical routes, item counters, ending requirements, and v1.1.2 changes</strong> — with spoiler-free summaries available.
               </p>
@@ -418,7 +420,7 @@ export function HomePage() {
         <section className="px-5 md:px-8 pb-10">
           <div className="mx-auto max-w-7xl">
             <SectionHeader icon={<Star className="h-3 w-3 text-amber/40" />}>What Players Say</SectionHeader>
-            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-3" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.18 }}>
+            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-3" initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.18 }}>
               {[
                 { quote: "Still can't make it past 30 days lol. This game is so addicting!", cite: "CousinKwan, itch.io" },
                 { quote: "This game is like a 9/10 and for the price you won't get anything better.", cite: "itch.io player" },
@@ -444,7 +446,7 @@ export function HomePage() {
         <section className="px-5 md:px-8 pb-10">
           <div className="mx-auto max-w-7xl">
             <SectionHeader icon={<Siren className="h-3 w-3 text-amber/40" />}>Night Event Counters</SectionHeader>
-            <motion.div className="overflow-x-auto" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
+            <motion.div className="overflow-x-auto" initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
               <table className="w-full text-left" style={{ borderCollapse: "collapse" }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
@@ -483,12 +485,12 @@ export function HomePage() {
         <section className="px-5 md:px-8 pb-10">
           <div className="mx-auto max-w-7xl">
             <SectionHeader icon={<Trophy className="h-3 w-3 text-amber/40" />}>Endings Overview</SectionHeader>
-            <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.25 }}>
+            <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5" initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.25 }}>
               {endingPreview.map((item) => (
                 <Link
                   key={item.type}
                   href={item.href}
-                  className="group flex items-center gap-3 rounded-xl border px-4 py-3 transition-all duration-200"
+                  className="group flex items-center gap-3 rounded-xl border px-4 py-3 active:scale-[0.98] transition-all duration-200"
                   style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                   onMouseEnter={e => {
                     (e.currentTarget as HTMLElement).style.borderColor = `${item.accent}44`;

@@ -114,7 +114,7 @@ export function Footer() {
               href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-xs font-bold transition-all duration-200"
+              className="group inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-xs font-bold active:scale-[0.98] transition-all duration-200"
               style={{ borderColor: "rgba(245,158,11,0.20)", background: "rgba(245,158,11,0.06)", color: "#f59e0b" }}
               onMouseEnter={e => {
                 (e.currentTarget as HTMLElement).style.background = "rgba(245,158,11,0.14)";
@@ -144,7 +144,7 @@ export function Footer() {
                     className="group flex items-center gap-2.5 py-1.5 text-xs transition-colors duration-150"
                     style={{ color: "rgba(188,207,230,0.7)" }}
                   >
-                    <span className="h-px w-0 group-hover:w-3 transition-all duration-200 rounded-full" style={{ background: "rgba(245,158,11,0.50)" }} />
+                    <span className="h-px w-0 group-hover:w-3 active:scale-[0.98] transition-all duration-200 rounded-full" style={{ background: "rgba(245,158,11,0.50)" }} />
                     <span className="group-hover:text-amber/80 transition-colors duration-150">{link.label}</span>
                   </Link>
                 </li>
