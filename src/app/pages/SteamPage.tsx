@@ -17,7 +17,7 @@ const faqData = [
   },
   {
     q: "How much does it cost on Steam?",
-    a: "$1.99 USD, same price as itch.io.",
+    a: "$1.79 USD during the -10% launch sale (regular $1.99). Same base price as itch.io, but the launch discount makes Steam slightly cheaper for a limited time.",
   },
   {
     q: "Will Steam have achievements?",
@@ -42,13 +42,13 @@ const faqData = [
 ];
 
 const comparisonRows = [
-  { feature: "Price", steam: "$1.99", itch: "$1.99" },
+  { feature: "Price", steam: "$1.79 (-10% launch sale)", itch: "$1.99" },
   { feature: "Game Version", steam: "v1.1.2", itch: "v1.1.2" },
   { feature: "DRM-Free", steam: "No (Steam DRM)", itch: "Yes" },
   { feature: "Auto Updates", steam: "Yes (Steam auto-update)", itch: "Manual download" },
-  { feature: "Achievements", steam: "Likely (custom Steam achievements)", itch: "Not applicable" },
-  { feature: "Cloud Saves", steam: "Unconfirmed", itch: "Manual backup" },
-  { feature: "Steam Deck", steam: "Likely works (Proton)", itch: "Manual install" },
+  { feature: "Achievements", steam: "Yes (Steam achievements)", itch: "Not applicable" },
+  { feature: "Cloud Saves", steam: "Steam Cloud", itch: "Manual backup" },
+  { feature: "Steam Deck", steam: "Playable (Proton)", itch: "Manual install" },
   { feature: "Developer Revenue", steam: "~70% (Steam cut)", itch: "~90%+ (lower platform fee)" },
   { feature: "Refund Policy", steam: "Steam refund (< 2 hrs / 14 days)", itch: "Developer discretion" },
 ];
@@ -72,27 +72,24 @@ function TrailerPlayer() {
         <h2 className="text-base font-bold text-text-primary" style={NUNITO}>Official Trailer</h2>
         <span className="text-xs text-text-secondary" style={NUNITO}>({index + 1}/{trailerVideos.length})</span>
       </div>
-      <InfoCard>
-        <div className="relative overflow-hidden rounded-lg" style={{ background: "#000" }}>
-          <video
-            key={index}
-            ref={videoRef}
-            controls
-            muted
-            autoPlay
-            onEnded={handleEnded}
-            poster="/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png"
-            preload="none"
-            className="w-full aspect-video"
-            style={{ maxHeight: "480px" }}
-          >
-            <source src={trailerVideos[index]} type="video/mp4" />
-          </video>
-        </div>
-        <p className="mt-3 text-xs text-text-secondary" style={NUNITO}>
-          Don't Sleep With The Fishes — official Steam trailers. Point-and-click survival horror by DopplerGhost.
-        </p>
-      </InfoCard>
+      <div className="relative overflow-hidden rounded-xl" style={{ background: "#000" }}>
+        <video
+          key={index}
+          ref={videoRef}
+          controls
+          muted
+          autoPlay
+          onEnded={handleEnded}
+          poster="/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png"
+          preload="none"
+          className="w-full block"
+        >
+          <source src={trailerVideos[index]} type="video/mp4" />
+        </video>
+      </div>
+      <p className="mt-2 text-xs text-text-secondary" style={NUNITO}>
+        Don't Sleep With The Fishes — official Steam trailers. Point-and-click survival horror by DopplerGhost.
+      </p>
     </div>
   );
 }
@@ -134,7 +131,7 @@ export function SteamPage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div className="flex-1">
               <h2 className="text-base font-bold text-text-primary mb-1" style={NUNITO}>Buy on Steam</h2>
-              <p className="text-xs text-text-secondary" style={NUNITO}>Now available for $1.99. Same game, with Steam achievements and auto-updates.</p>
+              <p className="text-xs text-text-secondary" style={NUNITO}>Now available at -10% launch discount ($1.79). Same game, with Steam achievements and auto-updates.</p>
             </div>
             <a
               href="https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/"
