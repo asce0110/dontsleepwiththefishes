@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const STEAM_URL = "https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/";
-const STEAM_LAUNCH = new Date("2026-06-26T17:00:00Z");
+const STEAM_LAUNCH = new Date("2026-06-26T11:00:00Z");
 
 const labels = {
   en: { days: "Days", hours: "Hours", minutes: "Minutes", seconds: "Seconds", coming: "COMING TO STEAM — JUNE 26", wishlist: "Wishlist Now", now: "NOW ON STEAM", play: "Play Now" },
