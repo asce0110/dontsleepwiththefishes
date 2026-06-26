@@ -135,11 +135,11 @@ function CommunityPoll() {
         })}
       </div>
       {voted && (
-        <p className="text-center text-xs mb-2" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>
+        <p className="text-center text-xs mb-2" style={{ color: "rgba(122,146,170,0.75)", ...NUNITO }}>
           你投票给了 <strong style={{ color: "rgba(245,158,11,0.8)" }}>{voted}</strong>。总票数：{total}。
         </p>
       )}
-      <p className="text-center text-xs" style={{ color: "rgba(122,146,170,0.35)", ...NUNITO }}>
+      <p className="text-center text-xs" style={{ color: "rgba(122,146,170,0.60)", ...NUNITO }}>
         投票仅保存在你的浏览器中。非科学投票。
       </p>
     </div>

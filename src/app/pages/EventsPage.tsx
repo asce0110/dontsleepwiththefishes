@@ -163,7 +163,7 @@ export function EventsPage() {
             <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)" }}>
               <Sparkles className="h-3 w-3" /> Updated for v1.1.2
             </span>
-            <span className="text-xs font-medium" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>Last verified: 2026-06-08</span>
+            <span className="text-xs font-medium" style={{ color: "rgba(122,146,170,0.75)", ...NUNITO }}>Last verified: 2026-06-08</span>
           </div>
           <h1 className="text-text-primary mb-3" style={{ fontFamily: "'Fredoka', sans-serif", fontWeight: 600, fontSize: "2rem", letterSpacing: "0.02em" }}>Don't Sleep With The Fishes Night Event Counters</h1>
 

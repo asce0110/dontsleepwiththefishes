@@ -110,7 +110,7 @@ export default function ZhHomePage() {
             <p className="text-sm leading-relaxed mb-3" style={{ color: "rgba(122,146,170,0.85)", ...NUNITO }}>
               <strong style={{ color: "#edf2f7" }}>Don't Sleep With The Fishes</strong> 是一款由 <strong style={{ color: "#edf2f7" }}>DopplerGhost</strong> 开发的 point-and-click 生存恐怖游戏。你被困在一艘正在下沉的船上——迅速收集物品、选择一名船员同伴，在海上度过每一个致命的夜晚。
             </p>
-            <p className="text-xs" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>
+            <p className="text-xs" style={{ color: "rgba(122,146,170,0.75)", ...NUNITO }}>
               平台：Windows · 当前版本：v1.1.2 · <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="hover:text-amber/60 transition-colors">itch.io 官方</a> · <a href="https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400/60 transition-colors">Steam 6月26日上线</a>
             </p>
           </div>
@@ -144,7 +144,7 @@ export default function ZhHomePage() {
             <iframe src="https://itch.io/embed/4537532?dark=true" width="552" height="167" frameBorder="0" title="itch.io 游戏" loading="lazy" className="w-full max-w-full" />
           </div>
         </div>
-        <p className="text-center mt-3 text-xs" style={{ color: "rgba(122,146,170,0.4)", ...NUNITO }}>直接在 itch.io 购买游玩 · $1.99 · 支持开发者</p>
+        <p className="text-center mt-3 text-xs" style={{ color: "rgba(122,146,170,0.60)", ...NUNITO }}>直接在 itch.io 购买游玩 · $1.99 · 支持开发者</p>
       </section>
 
       {/* ===== FOOTER ===== */}
@@ -152,7 +152,7 @@ export default function ZhHomePage() {
         <p className="text-xs mb-2" style={{ color: "rgba(188,207,230,0.65)", ...NUNITO }}>
           Don't Sleep With The Fishes &copy; DopplerGhost · 非官方粉丝攻略站
         </p>
-        <p className="text-xs flex items-center justify-center gap-2" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>
+        <p className="text-xs flex items-center justify-center gap-2" style={{ color: "rgba(122,146,170,0.75)", ...NUNITO }}>
           <a href="/" className="hover:text-amber/60 transition-colors">English</a>
           <span>·</span>
           <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="hover:text-amber/60 transition-colors">itch.io</a>

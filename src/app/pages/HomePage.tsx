@@ -321,7 +321,7 @@ export function HomePage() {
                 <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ background: "rgba(52,211,153,0.10)", border: "1px solid rgba(52,211,153,0.25)", color: "rgba(52,211,153,0.85)", ...NUNITO }}>
                   <Sparkles className="h-3 w-3" /> v1.1.2 Updated
                 </span>
-                <span className="text-xs font-medium" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>Unofficial fan-made guide</span>
+                <span className="text-xs font-medium" style={{ color: "rgba(122,146,170,0.75)", ...NUNITO }}>Unofficial fan-made guide</span>
               </div>
 
               {/* H1 Title */}
@@ -379,7 +379,7 @@ export function HomePage() {
               <p className="text-sm leading-relaxed mb-3" style={{ color: "rgba(122,146,170,0.85)", ...NUNITO }}>
                 <strong className="text-text-primary">Don't Sleep With The Fishes</strong> is a point-and-click survival horror game by DopplerGhost. You're trapped on a sinking ship — quickly gather items, choose a shipmate, and survive the nights at sea. This guide focuses on <strong className="text-text-primary">practical routes, item counters, ending requirements, and v1.1.2 changes</strong> — with spoiler-free summaries available.
               </p>
-              <p className="text-xs" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>
+              <p className="text-xs" style={{ color: "rgba(122,146,170,0.75)", ...NUNITO }}>
                 Platform: Windows &middot; Current version: v1.1.2 &middot; <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="hover:text-amber/60 transition-colors">Official on itch.io</a> &middot; <a href="https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400/60 transition-colors">Now on Steam</a>
               </p>
             </motion.div>
@@ -401,7 +401,7 @@ export function HomePage() {
               />
             </div>
           </div>
-          <p className="text-center mt-3 text-xs" style={{ color: "rgba(122,146,170,0.4)", ...NUNITO }}>
+          <p className="text-center mt-3 text-xs" style={{ color: "rgba(122,146,170,0.60)", ...NUNITO }}>
             Play directly on itch.io &middot; $1.99 &middot; Supports the developer
           </p>
         </section>
@@ -517,7 +517,7 @@ export function HomePage() {
 
         {/* ===== FOOTER NOTE ===== */}
         <div className="border-t px-5 py-5 text-center" style={{ borderColor: "rgba(12,20,38,1)" }}>
-          <p className="text-xs" style={{ color: "rgba(42,62,90,1)", ...NUNITO }}>
+          <p className="text-xs" style={{ color: "rgba(122,146,170,0.75)", ...NUNITO }}>
             Unofficial fan-made guide &middot; Not affiliated with DopplerGhost &middot;{" "}
             <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-amber/50">Official Game on itch.io</a>
           </p>

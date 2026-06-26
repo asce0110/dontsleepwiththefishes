@@ -135,11 +135,11 @@ function CommunityPoll() {
         })}
       </div>
       {voted && (
-        <p className="text-center text-xs mb-2" style={{ color: "rgba(122,146,170,0.5)", ...NUNITO }}>
+        <p className="text-center text-xs mb-2" style={{ color: "rgba(122,146,170,0.75)", ...NUNITO }}>
           You voted for <strong style={{ color: "rgba(245,158,11,0.8)" }}>{voted}</strong>. Total votes: {total}.
         </p>
       )}
-      <p className="text-center text-xs" style={{ color: "rgba(122,146,170,0.35)", ...NUNITO }}>
+      <p className="text-center text-xs" style={{ color: "rgba(122,146,170,0.60)", ...NUNITO }}>
         Votes stored in your browser only. Not a scientific poll.
       </p>
     </div>
