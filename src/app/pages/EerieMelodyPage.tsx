@@ -63,7 +63,7 @@ export function EerieMelodyPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 550 }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                  <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                     <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Item</th>
                     <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Result</th>
                     <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>Cost / Risk</th>
@@ -72,7 +72,7 @@ export function EerieMelodyPage() {
                 </thead>
                 <tbody>
                   {counterTable.map((row, i) => (
-                    <tr key={row.item} style={{ borderBottom: i < counterTable.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                    <tr key={row.item} style={{ borderBottom: i < counterTable.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                       <td className="py-3 pr-3 text-sm font-bold text-text-primary" style={NUNITO}>{row.item}</td>
                       <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.result}</td>
                       <td className="py-3 pr-3 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.cost}</td>
@@ -123,9 +123,9 @@ export function EerieMelodyPage() {
               { href: "/guide", label: "Beginner Guide", desc: "First playthrough survival tips" },
               { href: "/walkthrough", label: "Walkthrough", desc: "Day-by-day survival route" },
             ].map(({ href, label, desc }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
                   <div className="text-xs text-text-secondary">{desc}</div>

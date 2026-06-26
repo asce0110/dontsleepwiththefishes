@@ -232,7 +232,7 @@ export function ZhChangelogPage() {
                 {/* Timeline dot */}
                 <div className="hidden sm:flex flex-col items-center shrink-0 pt-1">
                   <span className="h-2.5 w-2.5 rounded-full" style={{ background: typeColors[entry.type], boxShadow: `0 0 8px ${typeColors[entry.type]}` }} />
-                  {i < entries.length - 1 && <span className="w-px flex-1 mt-1" style={{ background: "rgba(15,31,56,0.5)" }} />}
+                  {i < entries.length - 1 && <span className="w-px flex-1 mt-1" style={{ background: "rgba(245,158,11,0.06)" }} />}
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
@@ -285,7 +285,7 @@ export function ZhChangelogPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <thead>
-                <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>官方变更</th>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>受影响页面</th>
                   <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>行动</th>
@@ -293,7 +293,7 @@ export function ZhChangelogPage() {
               </thead>
               <tbody>
                 {patchImpactTable.map((row, i) => (
-                  <tr key={row.change} style={{ borderBottom: i < patchImpactTable.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                  <tr key={row.change} style={{ borderBottom: i < patchImpactTable.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                     <td className="py-3 pr-3 text-xs font-bold text-text-primary" style={NUNITO}>{row.change}</td>
                     <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.pages}</td>
                     <td className="py-3 text-xs hidden md:table-cell" style={{ color: "rgba(52,211,153,0.8)", ...NUNITO }}>{row.action}</td>
@@ -326,9 +326,9 @@ export function ZhChangelogPage() {
               { href: "/zh/version-112", label: "v1.1.2 补丁说明", desc: "完整更新详解" },
               { href: "/zh/guide", label: "新手指南", desc: "从这里开始" },
             ].map(({ href, label, desc }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
                   <div className="text-xs text-text-secondary">{desc}</div>

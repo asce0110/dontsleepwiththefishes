@@ -59,7 +59,7 @@ export function ZhVersion112Page() {
             <div className="overflow-x-auto">
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                  <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                     <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>变更</th>
                     <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>策略影响</th>
                     <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>来源</th>
@@ -67,7 +67,7 @@ export function ZhVersion112Page() {
                 </thead>
                 <tbody>
                   {changes.map((row, i) => (
-                    <tr key={row.change} style={{ borderBottom: i < changes.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                    <tr key={row.change} style={{ borderBottom: i < changes.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                       <td className="py-3 pr-3 text-sm font-bold text-text-primary" style={NUNITO}>{row.change}</td>
                       <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.impact}</td>
                       <td className="py-3"><SourceBadge source={row.confidence} /></td>
@@ -103,9 +103,9 @@ export function ZhVersion112Page() {
               { href: "/zh/tips-tricks", label: "技巧与窍门", desc: "更新策略建议" },
               { href: "/zh/changelog", label: "更新日志", desc: "百科变更历史" },
             ].map(({ href, label, desc }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
                   <div className="text-xs text-text-secondary">{desc}</div>

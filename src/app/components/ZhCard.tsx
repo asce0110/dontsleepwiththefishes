@@ -8,9 +8,9 @@ const NUNITO: React.CSSProperties = { fontFamily: "'Nunito', sans-serif" };
 export function Card({ href, icon, title, desc }: { href: string; icon: React.ReactNode; title: string; desc: string }) {
   return (
     <Link href={href} className="group flex items-start gap-3 rounded-xl border p-4 transition-all duration-200"
-      style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+      style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.28)"; }}
-      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
       <span className="mt-0.5 shrink-0 text-amber">{icon}</span>
       <div className="flex-1 min-w-0">
         <h3 className="font-bold text-sm text-text-primary group-hover:text-amber transition-colors" style={NUNITO}>{title}</h3>

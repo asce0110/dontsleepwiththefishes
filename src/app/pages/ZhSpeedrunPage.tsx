@@ -82,9 +82,9 @@ export function ZhSpeedrunPage() {
               { href: "/zh/tips-tricks", label: "技巧与窍门", desc: "高级生存策略" },
               { href: "/zh/items/best-items", label: "最佳物品", desc: "物品等级列表" },
             ].map(({ href, label, desc }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
                   <div className="text-xs text-text-secondary">{desc}</div>

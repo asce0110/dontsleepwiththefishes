@@ -122,14 +122,14 @@ export function ZhAboutPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 450 }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                  <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                     <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest" style={{ color: "rgba(52,211,153,0.7)", ...NUNITO }}>本百科会做</th>
                     <th className="py-2 text-xs font-black uppercase tracking-widest" style={{ color: "rgba(239,68,68,0.7)", ...NUNITO }}>本百科不会做</th>
                   </tr>
                 </thead>
                 <tbody>
                   {doesAndDoesnt.map(([does, doesnt], i) => (
-                    <tr key={does} style={{ borderBottom: i < doesAndDoesnt.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                    <tr key={does} style={{ borderBottom: i < doesAndDoesnt.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                       <td className="py-2.5 pr-3 text-xs" style={{ color: "rgba(52,211,153,0.8)", ...NUNITO }}>{does}</td>
                       <td className="py-2.5 text-xs" style={{ color: "rgba(239,68,68,0.7)", ...NUNITO }}>{doesnt}</td>
                     </tr>
@@ -148,7 +148,7 @@ export function ZhAboutPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                  <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                     <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>标签</th>
                     <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>含义</th>
                     <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>示例</th>
@@ -156,7 +156,7 @@ export function ZhAboutPage() {
                 </thead>
                 <tbody>
                   {sourceLabels.map((row, i) => (
-                    <tr key={row.label} style={{ borderBottom: i < sourceLabels.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                    <tr key={row.label} style={{ borderBottom: i < sourceLabels.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                       <td className="py-2.5 pr-3"><SourceBadge source={row.label as "Official" | "Verified" | "Community" | "Unverified"} /></td>
                       <td className="py-2.5 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.meaning}</td>
                       <td className="py-2.5 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.example}</td>
@@ -192,14 +192,14 @@ export function ZhAboutPage() {
             <div className="overflow-x-auto mb-2">
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 350 }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                  <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                     <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>页面类型</th>
                     <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>优先级</th>
                   </tr>
                 </thead>
                 <tbody>
                   {versionPriority.map((row, i) => (
-                    <tr key={row.pageType} style={{ borderBottom: i < versionPriority.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                    <tr key={row.pageType} style={{ borderBottom: i < versionPriority.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                       <td className="py-2.5 pr-3 text-xs text-text-secondary" style={NUNITO}>{row.pageType}</td>
                       <td className="py-2.5 text-xs font-bold" style={{ color: row.priority === "最高" ? "rgba(52,211,153,0.9)" : row.priority === "高" ? "rgba(96,165,250,0.9)" : "rgba(122,146,170,0.7)", ...NUNITO }}>{row.priority}</td>
                     </tr>
@@ -219,14 +219,14 @@ export function ZhAboutPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 400 }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                  <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                     <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>级别</th>
                     <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>含义</th>
                   </tr>
                 </thead>
                 <tbody>
                   {spoilerLevels.map((row, i) => (
-                    <tr key={row.level} style={{ borderBottom: i < spoilerLevels.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                    <tr key={row.level} style={{ borderBottom: i < spoilerLevels.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                       <td className="py-2.5 pr-3 text-xs font-bold" style={{ color: row.level === "重度" ? "rgba(239,68,68,0.8)" : row.level === "中度" ? "rgba(251,191,36,0.8)" : "rgba(52,211,153,0.8)", ...NUNITO }}>{row.level}</td>
                       <td className="py-2.5 text-xs text-text-secondary" style={NUNITO}>{row.meaning}</td>
                     </tr>
@@ -250,7 +250,7 @@ export function ZhAboutPage() {
                 <ExternalLink className="h-3.5 w-3.5" /> 官方 itch.io 页面
               </a>
             </div>
-            <div className="mt-3 pt-3 border-t" style={{ borderColor: "rgba(15,31,56,0.5)" }}>
+            <div className="mt-3 pt-3 border-t" style={{ borderColor: "rgba(245,158,11,0.06)" }}>
               <p className="text-xs text-text-secondary leading-relaxed" style={NUNITO}>
                 截图用于攻略说明，应限制在必要范围内。社区百科页面可作为研究线索，但本站不会复制 Fandom 文章。社区来源的机制被重写，适当标注出处，并在可能时单独验证。
               </p>
@@ -265,7 +265,7 @@ export function ZhAboutPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {["提交修正", "报告未验证路线", "提交最高天数记录", "建议缺失的事件"].map((item) => (
-                <div key={item} className="rounded-xl border px-4 py-3 text-sm font-medium text-text-primary" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)", ...NUNITO }}>
+                <div key={item} className="rounded-xl border px-4 py-3 text-sm font-medium text-text-primary" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)", ...NUNITO }}>
                   {item}
                 </div>
               ))}
@@ -300,9 +300,9 @@ export function ZhAboutPage() {
               { href: "/zh/achievements", label: "成就与记录", desc: "完成度与最高天数追踪" },
               { href: "/zh/faq/steam-release", label: "Steam 发售 FAQ", desc: "Steam 移植状态" },
             ].map(({ href, label, desc }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
                   <div className="text-xs text-text-secondary">{desc}</div>

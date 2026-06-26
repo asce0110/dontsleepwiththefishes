@@ -124,7 +124,7 @@ export function AchievementsPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <thead>
-                <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Feature</th>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Current Status</th>
                   <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Src</th>
@@ -132,7 +132,7 @@ export function AchievementsPage() {
               </thead>
               <tbody>
                 {statusTable.map((row, i) => (
-                  <tr key={row.feature} style={{ borderBottom: i < statusTable.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                  <tr key={row.feature} style={{ borderBottom: i < statusTable.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                     <td className="py-3 pr-3 text-sm font-bold text-text-primary" style={NUNITO}>{row.feature}</td>
                     <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.status}</td>
                     <td className="py-3"><SourceBadge source={row.confidence} /></td>
@@ -149,7 +149,7 @@ export function AchievementsPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 650 }}>
               <thead>
-                <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Goal</th>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Category</th>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>How to Track</th>
@@ -159,7 +159,7 @@ export function AchievementsPage() {
               </thead>
               <tbody>
                 {goals.map((row, i) => (
-                  <tr key={row.goal} style={{ borderBottom: i < goals.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                  <tr key={row.goal} style={{ borderBottom: i < goals.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                     <td className="py-3 pr-3 text-sm font-bold text-text-primary" style={NUNITO}>{row.goal}</td>
                     <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.category}</td>
                     <td className="py-3 pr-3 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.howToTrack}</td>
@@ -183,7 +183,7 @@ export function AchievementsPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 550 }}>
               <thead>
-                <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Ending / Route</th>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Confirmed?</th>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>Spoiler</th>
@@ -192,7 +192,7 @@ export function AchievementsPage() {
               </thead>
               <tbody>
                 {endingTracker.map((row, i) => (
-                  <tr key={row.ending} style={{ borderBottom: i < endingTracker.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                  <tr key={row.ending} style={{ borderBottom: i < endingTracker.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                     <td className="py-3 pr-3 text-sm font-bold text-text-primary" style={NUNITO}>{row.ending}</td>
                     <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.confirmed}</td>
                     <td className="py-3 pr-3 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.spoiler}</td>
@@ -251,9 +251,9 @@ export function AchievementsPage() {
               { href: "/faq/steam-release", label: "Steam Release FAQ", desc: "Steam port status & timeline" },
               { href: "/tips-tricks", label: "Tips & Tricks", desc: "Best survival strategies" },
             ].map(({ href, label, desc }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
                   <div className="text-xs text-text-secondary">{desc}</div>

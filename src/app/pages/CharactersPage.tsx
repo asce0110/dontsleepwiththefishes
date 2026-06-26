@@ -109,7 +109,7 @@ function CommunityPoll() {
               disabled={!!voted}
               className="group relative overflow-hidden rounded-xl border px-4 py-3 text-left transition-all duration-200"
               style={{
-                borderColor: voted === ch.name ? `${ch.accent}66` : voted ? "rgba(15,31,56,0.6)" : "rgba(15,31,56,1)",
+                borderColor: voted === ch.name ? `${ch.accent}66` : voted ? "rgba(245,158,11,0.07)" : "rgba(245,158,11,0.09)",
                 background: voted === ch.name ? `${ch.accent}11` : "rgba(8,14,28,1)",
                 cursor: voted ? "default" : "pointer",
                 opacity: voted && voted !== ch.name ? 0.55 : 1,
@@ -122,7 +122,7 @@ function CommunityPoll() {
                 </div>
                 <span className="text-xs font-bold" style={{ color: ch.accent, ...NUNITO }}>{pct}%</span>
               </div>
-              <div className="h-1.5 rounded-full overflow-hidden" style={{ background: "rgba(15,31,56,1)" }}>
+              <div className="h-1.5 rounded-full overflow-hidden" style={{ background: "rgba(245,158,11,0.09)" }}>
                 <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pct}%`, background: ch.accent, boxShadow: `0 0 6px ${ch.accent}44` }} />
               </div>
               {!voted && (
@@ -251,7 +251,7 @@ export function CharactersPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                  <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                     <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Shipmate</th>
                     {comparisonColumns.map((col) => (
                       <th key={col.key} className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>{col.label}</th>
@@ -260,7 +260,7 @@ export function CharactersPage() {
                 </thead>
                 <tbody>
                   {characters.map((ch, i) => (
-                    <tr key={ch.name} style={{ borderBottom: i < characters.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                    <tr key={ch.name} style={{ borderBottom: i < characters.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                       <td className="py-3 pr-3">
                         <div className="flex items-center gap-2">
                           <span style={{ color: ch.accent }}>{ch.icon}</span>
@@ -299,9 +299,9 @@ export function CharactersPage() {
               { href: "/walkthrough", label: "Walkthrough", desc: "Day-by-day survival route", icon: <Anchor className="h-3.5 w-3.5" /> },
               { href: "/endings", label: "Endings Guide", desc: "Which shipmate for which ending", icon: <Siren className="h-3.5 w-3.5" /> },
             ].map(({ href, label, desc, icon }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
                   <div className="text-xs text-text-secondary">{desc}</div>

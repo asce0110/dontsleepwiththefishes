@@ -119,7 +119,7 @@ export function GettingStartedPage() {
                 { name: "Row", role: "Combat & defense", effect: "Helps counter monster events like Eyes and Anglerfish" },
                 { name: "Captain Whiskers", role: "Fishing & luck", effect: "Fishing chance +1% in v1.1.2, unique lore interactions" },
               ].map((mate) => (
-                <div key={mate.name} className="rounded-xl border p-3" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}>
+                <div key={mate.name} className="rounded-xl border p-3" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}>
                   <div className="text-sm font-bold text-text-primary mb-0.5">{mate.name}</div>
                   <div className="text-xs font-bold uppercase tracking-wider text-amber/60 mb-1">{mate.role}</div>
                   <div className="text-xs text-text-secondary leading-relaxed">{mate.effect}</div>
@@ -152,9 +152,9 @@ export function GettingStartedPage() {
                 { href: "/walkthrough", label: "Walkthrough",     desc: "Step-by-step guide" },
                 { href: "/events",      label: "Events Guide",    desc: "Prepare for the night" },
               ].map(({ href, label, desc }) => (
-                <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+                <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                   <div>
                     <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
                     <div className="text-xs text-text-secondary">{desc}</div>

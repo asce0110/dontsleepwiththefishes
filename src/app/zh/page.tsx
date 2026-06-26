@@ -96,7 +96,7 @@ export default function ZhHomePage() {
                 style={{ ...NUNITO, borderColor: "rgba(245,158,11,0.22)", background: "rgba(245,158,11,0.06)", color: "#f59e0b" }}>物品攻略</Link>
               <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-medium transition-all"
-                style={{ ...NUNITO, borderColor: "rgba(21,37,68,1)", background: "rgba(11,17,32,0.8)", color: "rgba(122,146,170,1)" }}>itch.io 购买 <ExternalLink className="h-3.5 w-3.5" /></a>
+                style={{ ...NUNITO, borderColor: "rgba(245,158,11,0.09)", background: "rgba(11,17,32,0.8)", color: "rgba(122,146,170,1)" }}>itch.io 购买 <ExternalLink className="h-3.5 w-3.5" /></a>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function ZhHomePage() {
       {/* ===== ITCH.IO EMBED ===== */}
       <section className="px-5 md:px-8 pb-12">
         <div className="mx-auto max-w-7xl flex justify-center">
-          <div className="w-full max-w-[552px] overflow-hidden rounded-xl border" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,13,24,1)" }}>
+          <div className="w-full max-w-[552px] overflow-hidden rounded-xl border" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,13,24,1)" }}>
             <iframe src="https://itch.io/embed/4537532?dark=true" width="552" height="167" frameBorder="0" title="itch.io 游戏" loading="lazy" className="w-full max-w-full" />
           </div>
         </div>
@@ -148,7 +148,7 @@ export default function ZhHomePage() {
       </section>
 
       {/* ===== FOOTER ===== */}
-      <footer className="border-t px-5 py-6 text-center" style={{ borderColor: "rgba(12,20,38,1)" }}>
+      <footer className="border-t px-5 py-6 text-center" style={{ borderColor: "rgba(245,158,11,0.09)" }}>
         <p className="text-xs mb-2" style={{ color: "rgba(188,207,230,0.65)", ...NUNITO }}>
           Don't Sleep With The Fishes &copy; DopplerGhost · 非官方粉丝攻略站
         </p>

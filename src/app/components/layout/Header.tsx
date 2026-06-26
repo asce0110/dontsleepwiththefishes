@@ -282,7 +282,7 @@ export function Header() {
                     }
                   >
                     <span className="h-1.5 w-1.5 rounded-full shrink-0" style={{
-                      background: active ? "#f59e0b" : "rgba(15,31,56,1)",
+                      background: active ? "#f59e0b" : "rgba(245,158,11,0.09)",
                       boxShadow: active ? "0 0 6px rgba(245,158,11,0.50)" : "none",
                     }} />
                     {active

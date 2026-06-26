@@ -55,7 +55,7 @@ interface InfoCardProps {
 
 export function InfoCard({ children, variant = "default", className = "" }: InfoCardProps) {
   const styles: Record<string, { border: string; bg: string }> = {
-    default: { border: "rgba(15,31,56,1)",      bg: "rgba(8,14,28,1)" },
+    default: { border: "rgba(245,158,11,0.09)",      bg: "rgba(8,14,28,1)" },
     amber:   { border: "rgba(245,158,11,0.25)", bg: "rgba(245,158,11,0.06)" },
     warning: { border: "rgba(245,158,11,0.25)", bg: "rgba(245,158,11,0.06)" },
     danger:  { border: "rgba(239,68,68,0.25)",  bg: "rgba(239,68,68,0.06)" },

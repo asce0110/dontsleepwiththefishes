@@ -90,7 +90,7 @@ export function Footer() {
     : { guide: "A fan-made survival guide for Don't Sleep With The Fishes. Not affiliated with DopplerGhost. Made by survivors, for survivors.", play: "Play on itch.io", quickLinks: "Quick Links", resources: "Resources", official: "Official Game", about: "About This Wiki", nowOn: "Now on", copyright: `© ${year} DSWTF Wiki — Fan-made, not affiliated with DopplerGhost` };
 
   return (
-    <footer className="relative border-t" style={{ borderColor: "rgba(15,31,56,0.8)", background: "linear-gradient(to bottom, rgba(5,10,20,1), rgba(4,8,15,1))" }}>
+    <footer className="relative border-t" style={{ borderColor: "rgba(245,158,11,0.10)", background: "linear-gradient(to bottom, rgba(5,10,20,1), rgba(4,8,15,1))" }}>
 
       <WaveDivider />
       <FooterBubbles />
@@ -175,7 +175,7 @@ export function Footer() {
                   <span className="group-hover:text-amber/80 transition-colors">itch.io</span>
                 </a>
               </li>
-              <li className="pt-3 mt-3 border-t" style={{ borderColor: "rgba(15,31,56,0.6)" }}>
+              <li className="pt-3 mt-3 border-t" style={{ borderColor: "rgba(245,158,11,0.07)" }}>
                 <Link href={isZh ? "/zh/about" : "/about"} className="group flex items-center gap-2 py-1.5 text-xs transition-colors duration-150"
                   style={{ color: "rgba(188,207,230,0.7)" }}>
                   <span className="group-hover:text-amber/80 transition-colors">{zhFooterText.about}</span>
@@ -187,7 +187,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3"
-          style={{ borderTop: "1px solid rgba(15,31,56,0.5)" }}>
+          style={{ borderTop: "1px solid rgba(245,158,11,0.06)" }}>
           <div className="flex items-center gap-2">
             <span className="h-1 w-1 rounded-full bg-amber/30" />
             <p className="text-xs" style={{ color: "rgba(122,146,170,0.75)" }}>

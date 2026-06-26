@@ -107,7 +107,7 @@ export function ZhItemsPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 700 }}>
               <thead>
-                <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>物品</th>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>来源</th>
                   <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>最佳用途</th>
@@ -119,7 +119,7 @@ export function ZhItemsPage() {
               </thead>
               <tbody>
                 {items.map((row, i) => (
-                  <tr key={row.item} style={{ borderBottom: i < items.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}
+                  <tr key={row.item} style={{ borderBottom: i < items.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(245,158,11,0.03)"; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}>
                     <td className="py-3 pr-3"><div><span className="text-sm font-bold text-text-primary" style={NUNITO}>{row.item}</span>{row.v112Change && <span className="block text-xs mt-0.5" style={{ color: "rgba(52,211,153,0.7)" }}>{row.v112Change}</span>}</div></td>
@@ -147,9 +147,9 @@ export function ZhItemsPage() {
               { href: "/zh/items", label: "食物、钓鱼 & 修理", desc: "Bait、Fishing Rod、Duct Tape" },
               { href: "/zh/items", label: "箱子 & 限量物品", desc: "Swim Ring、稀有箱子掉落" },
             ].map(({ href, label, desc }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div><div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div><div className="text-xs text-text-secondary">{desc}</div></div>
                 <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
@@ -188,9 +188,9 @@ export function ZhItemsPage() {
               { href: "/zh/endings", label: "结局攻略", desc: "全部结局 & 物品需求" },
               { href: "/zh/items/best-items", label: "最佳物品等级表", desc: "S 级到 C 级排名" },
             ].map(({ href, label, desc }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div><div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div><div className="text-xs text-text-secondary">{desc}</div></div>
                 <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>

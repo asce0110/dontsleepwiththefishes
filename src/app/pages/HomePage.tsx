@@ -361,9 +361,9 @@ export function HomePage() {
                 </Link>
                 <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-medium transition-all"
-                  style={{ ...NUNITO, borderColor: "rgba(21,37,68,1)", background: "rgba(11,17,32,0.8)", color: "rgba(122,146,170,1)" }}
+                  style={{ ...NUNITO, borderColor: "rgba(245,158,11,0.09)", background: "rgba(11,17,32,0.8)", color: "rgba(122,146,170,1)" }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.28)"; (e.currentTarget as HTMLElement).style.color = "#edf2f7"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(21,37,68,1)"; (e.currentTarget as HTMLElement).style.color = "rgba(122,146,170,1)"; }}>
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; (e.currentTarget as HTMLElement).style.color = "rgba(122,146,170,1)"; }}>
                   Play on itch.io <ExternalLink className="h-3.5 w-3.5" />
                 </a>
               </div>
@@ -389,7 +389,7 @@ export function HomePage() {
         {/* ===== ITCH.IO EMBED ===== */}
         <section className="px-5 md:px-8 pb-10">
           <div className="mx-auto max-w-7xl flex justify-center">
-            <div className="w-full max-w-[552px] overflow-hidden rounded-xl border" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,13,24,1)" }}>
+            <div className="w-full max-w-[552px] overflow-hidden rounded-xl border" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,13,24,1)" }}>
               <iframe
                 src="https://itch.io/embed/4537532?dark=true"
                 width="552"
@@ -424,7 +424,7 @@ export function HomePage() {
                 { quote: "This game is like a 9/10 and for the price you won't get anything better.", cite: "itch.io player" },
                 { quote: "Is there a wiki for this game yet?", cite: "itch.io player (yes, you're on it)" },
               ].map(({ quote, cite }) => (
-                <blockquote key={cite} className="rounded-xl border p-4 flex flex-col" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}>
+                <blockquote key={cite} className="rounded-xl border p-4 flex flex-col" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}>
                   <p className="text-xs leading-relaxed mb-3 flex-1" style={{ color: "rgba(188,207,230,0.85)", ...NUNITO }}>
                     &ldquo;{quote}&rdquo;
                   </p>
@@ -447,7 +447,7 @@ export function HomePage() {
             <motion.div className="overflow-x-auto" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
               <table className="w-full text-left" style={{ borderCollapse: "collapse" }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                  <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                     <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Event</th>
                     <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Best Counter</th>
                     <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Search Intent</th>
@@ -455,7 +455,7 @@ export function HomePage() {
                 </thead>
                 <tbody>
                   {eventPreview.map((row, i) => (
-                    <tr key={row.event} style={{ borderBottom: i < eventPreview.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}
+                    <tr key={row.event} style={{ borderBottom: i < eventPreview.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}
                       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(245,158,11,0.03)"; }}
                       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}>
                       <td className="py-3 pr-4">
@@ -489,13 +489,13 @@ export function HomePage() {
                   key={item.type}
                   href={item.href}
                   className="group flex items-center gap-3 rounded-xl border px-4 py-3 transition-all duration-200"
-                  style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+                  style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                   onMouseEnter={e => {
                     (e.currentTarget as HTMLElement).style.borderColor = `${item.accent}44`;
                     (e.currentTarget as HTMLElement).style.background = "rgba(12,20,36,1)";
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)";
+                    (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)";
                     (e.currentTarget as HTMLElement).style.background = "rgba(8,14,28,1)";
                   }}
                 >
@@ -516,7 +516,7 @@ export function HomePage() {
         </section>
 
         {/* ===== FOOTER NOTE ===== */}
-        <div className="border-t px-5 py-5 text-center" style={{ borderColor: "rgba(12,20,38,1)" }}>
+        <div className="border-t px-5 py-5 text-center" style={{ borderColor: "rgba(245,158,11,0.09)" }}>
           <p className="text-xs" style={{ color: "rgba(122,146,170,0.75)", ...NUNITO }}>
             Unofficial fan-made guide &middot; Not affiliated with DopplerGhost &middot;{" "}
             <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-amber/50">Official Game on itch.io</a>

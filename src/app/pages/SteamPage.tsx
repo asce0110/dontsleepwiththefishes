@@ -113,7 +113,7 @@ export function SteamPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
+                  <tr style={{ borderBottom: "1px solid rgba(245,158,11,0.09)" }}>
                     <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Feature</th>
                     <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>
                       <span className="inline-flex items-center gap-1.5">
@@ -129,7 +129,7 @@ export function SteamPage() {
                 </thead>
                 <tbody>
                   {comparisonRows.map((row, i) => (
-                    <tr key={row.feature} style={{ borderBottom: i < comparisonRows.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
+                    <tr key={row.feature} style={{ borderBottom: i < comparisonRows.length - 1 ? "1px solid rgba(245,158,11,0.06)" : "none" }}>
                       <td className="py-3 pr-4 text-xs font-bold text-text-primary" style={NUNITO}>{row.feature}</td>
                       <td className="py-3 pr-4 text-xs text-text-secondary" style={NUNITO}>{row.steam}</td>
                       <td className="py-3 text-xs text-text-secondary" style={NUNITO}>{row.itch}</td>
@@ -167,9 +167,9 @@ export function SteamPage() {
               { href: "/tips-tricks", label: "Tips & Tricks", desc: "Advanced strategies & best items" },
               { href: "/achievements", label: "Achievements & Records", desc: "Track your completion" },
             ].map(({ href, label, desc }) => (
-              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
+              <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(245,158,11,0.09)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.09)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
                   <div className="text-xs text-text-secondary">{desc}</div>
