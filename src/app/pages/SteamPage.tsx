@@ -17,7 +17,7 @@ const faqData = [
   },
   {
     q: "How much does it cost on Steam?",
-    a: "$1.79 USD during the -10% launch sale (regular $1.99). Same base price as itch.io, but the launch discount makes Steam slightly cheaper for a limited time.",
+    a: "$2.15 during the -10% launch sale (regular $2.39). Slightly more than itch.io ($1.99), but the launch discount brings it close.",
   },
   {
     q: "Will Steam have achievements?",
@@ -42,7 +42,7 @@ const faqData = [
 ];
 
 const comparisonRows = [
-  { feature: "Price", steam: "$1.79 (-10% launch sale)", itch: "$1.99" },
+  { feature: "Price", steam: "$2.15 (-10% launch sale, reg $2.39)", itch: "$1.99" },
   { feature: "Game Version", steam: "v1.1.2", itch: "v1.1.2" },
   { feature: "DRM-Free", steam: "No (Steam DRM)", itch: "Yes" },
   { feature: "Auto Updates", steam: "Yes (Steam auto-update)", itch: "Manual download" },
@@ -131,7 +131,7 @@ export function SteamPage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div className="flex-1">
               <h2 className="text-base font-bold text-text-primary mb-1" style={NUNITO}>Buy on Steam</h2>
-              <p className="text-xs text-text-secondary" style={NUNITO}>Now available at -10% launch discount ($1.79). Same game, with Steam achievements and auto-updates.</p>
+              <p className="text-xs text-text-secondary" style={NUNITO}>Now available at -10% launch discount ($2.15). Steam achievements, cloud saves, and auto-updates included.</p>
             </div>
             <a
               href="https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/"
