@@ -103,6 +103,31 @@ export function SteamPage() {
           </div>
         </InfoCard>
 
+        {/* Game Trailer */}
+        <div className="mb-8">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="h-5 w-0.5 rounded-full bg-blue-400" />
+            <h2 className="text-base font-bold text-text-primary" style={NUNITO}>Official Trailer</h2>
+          </div>
+          <InfoCard>
+            <div className="relative overflow-hidden rounded-lg" style={{ background: "#000" }}>
+              <video
+                controls
+                poster="/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png"
+                preload="none"
+                className="w-full aspect-video"
+                style={{ maxHeight: "480px" }}
+              >
+                <source src="https://shared.cdn.queniuqe.com/store_item_assets/steam/apps/4834070/extras/b65b93df1bf498a032c16164e1282574.mp4?t=1782468658" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p className="mt-3 text-xs text-text-secondary" style={NUNITO}>
+              Don't Sleep With The Fishes — official Steam trailer. Point-and-click survival horror by DopplerGhost.
+            </p>
+          </InfoCard>
+        </div>
+
         {/* Steam vs itch.io comparison */}
         <div className="mb-8">
           <div className="flex items-center gap-2.5 mb-4">
