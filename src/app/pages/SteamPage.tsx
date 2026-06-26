@@ -3,7 +3,8 @@
 import { SEO } from "../components/SEO";
 import { InfoCard } from "../components/ui/Card";
 import Link from "next/link";
-import { ExternalLink, ChevronRight, Sparkles, ArrowRight, Monitor, Globe, ShieldCheck, Download } from "lucide-react";
+import { useState, useRef } from "react";
+import { ExternalLink, ChevronRight, Sparkles, Monitor, Globe } from "lucide-react";
 import { SteamCountdown } from "../components/steam-countdown";
 
 const NUNITO = { fontFamily: "'Nunito', sans-serif" } as const;
@@ -51,6 +52,50 @@ const comparisonRows = [
   { feature: "Developer Revenue", steam: "~70% (Steam cut)", itch: "~90%+ (lower platform fee)" },
   { feature: "Refund Policy", steam: "Steam refund (< 2 hrs / 14 days)", itch: "Developer discretion" },
 ];
+
+const trailerVideos = [
+  "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4834070/extras/b65b93df1bf498a032c16164e1282574.mp4?t=1782468658",
+  "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4834070/extras/ebbe78bd8d6fbc86a51614906622ae97.mp4?t=1782468658",
+  "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4834070/extras/b22d56a786e8bb9306686050e1a70bb9.mp4?t=1782468658",
+];
+
+function TrailerPlayer() {
+  const [index, setIndex] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleEnded = () => setIndex((i) => (i + 1) % trailerVideos.length);
+
+  return (
+    <div className="mb-8">
+      <div className="flex items-center gap-2.5 mb-4">
+        <span className="h-5 w-0.5 rounded-full bg-blue-400" />
+        <h2 className="text-base font-bold text-text-primary" style={NUNITO}>Official Trailer</h2>
+        <span className="text-xs text-text-secondary" style={NUNITO}>({index + 1}/{trailerVideos.length})</span>
+      </div>
+      <InfoCard>
+        <div className="relative overflow-hidden rounded-lg" style={{ background: "#000" }}>
+          <video
+            key={index}
+            ref={videoRef}
+            controls
+            muted
+            autoPlay
+            onEnded={handleEnded}
+            poster="/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png"
+            preload="none"
+            className="w-full aspect-video"
+            style={{ maxHeight: "480px" }}
+          >
+            <source src={trailerVideos[index]} type="video/mp4" />
+          </video>
+        </div>
+        <p className="mt-3 text-xs text-text-secondary" style={NUNITO}>
+          Don't Sleep With The Fishes — official Steam trailers. Point-and-click survival horror by DopplerGhost.
+        </p>
+      </InfoCard>
+    </div>
+  );
+}
 
 export function SteamPage() {
   return (
@@ -103,37 +148,8 @@ export function SteamPage() {
           </div>
         </InfoCard>
 
-        {/* Game Trailers */}
-        <div className="mb-8">
-          <div className="flex items-center gap-2.5 mb-4">
-            <span className="h-5 w-0.5 rounded-full bg-blue-400" />
-            <h2 className="text-base font-bold text-text-primary" style={NUNITO}>Official Trailers</h2>
-          </div>
-          <InfoCard>
-            <div className="grid grid-cols-1 gap-4">
-              {[
-                { src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4834070/extras/b65b93df1bf498a032c16164e1282574.mp4?t=1782468658", label: "Gameplay Trailer" },
-                { src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4834070/extras/ebbe78bd8d6fbc86a51614906622ae97.mp4?t=1782468658", label: "Survival at Sea" },
-                { src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4834070/extras/b22d56a786e8bb9306686050e1a70bb9.mp4?t=1782468658", label: "Night Events" },
-              ].map(({ src, label }) => (
-                <div key={src} className="relative overflow-hidden rounded-lg" style={{ background: "#000" }}>
-                  <video
-                    controls
-                    loop
-                    muted
-                    poster="/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png"
-                    preload="none"
-                    className="w-full aspect-video"
-                    style={{ maxHeight: "360px" }}
-                  >
-                    <source src={src} type="video/mp4" />
-                  </video>
-                  <p className="mt-2 text-xs text-text-secondary" style={NUNITO}>{label}</p>
-                </div>
-              ))}
-            </div>
-          </InfoCard>
-        </div>
+        {/* Game Trailer */}
+        <TrailerPlayer />
 
         {/* Steam vs itch.io comparison */}
         <div className="mb-8">
