@@ -3,7 +3,7 @@
 import { SEO } from "../components/SEO";
 import { InfoCard } from "../components/ui/Card";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { ExternalLink, ChevronRight, Sparkles, Monitor, Globe } from "lucide-react";
 import { SteamCountdown } from "../components/steam-countdown";
 
@@ -61,9 +61,28 @@ const trailerVideos = [
 
 function TrailerPlayer() {
   const [index, setIndex] = useState(0);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [active, setActive] = useState<0 | 1>(0);
+  const videoA = useRef<HTMLVideoElement>(null);
+  const videoB = useRef<HTMLVideoElement>(null);
 
-  const handleEnded = () => setIndex((i) => (i + 1) % trailerVideos.length);
+  const nextVideo = (index + 1) % trailerVideos.length;
+  // "active" is which DOM element is visible
+  const activeRef = active === 0 ? videoA : videoB;
+
+  // Play the active video when it changes
+  useEffect(() => {
+    const v = activeRef.current;
+    if (v) {
+      v.currentTime = 0;
+      v.play().catch(() => {});
+    }
+  }, [index]);
+
+  const handleEnded = useCallback(() => {
+    const next = (index + 1) % trailerVideos.length;
+    setIndex(next);
+    setActive((a) => (a === 0 ? 1 : 0));
+  }, [index]);
 
   return (
     <div className="mb-8">
@@ -72,23 +91,69 @@ function TrailerPlayer() {
         <h2 className="text-base font-bold text-text-primary" style={NUNITO}>Official Trailer</h2>
         <span className="text-xs text-text-secondary" style={NUNITO}>({index + 1}/{trailerVideos.length})</span>
       </div>
-      <div className="relative overflow-hidden rounded-xl" style={{ background: "#000" }}>
+      <div
+        className="relative overflow-hidden rounded-xl grid"
+        style={{ background: "#000" }}
+      >
+        {/* Always render both videos; only one visible via opacity */}
         <video
-          key={index}
-          ref={videoRef}
-          controls
+          ref={videoA}
           muted
           autoPlay
+          playsInline
           onEnded={handleEnded}
-          poster="/Don_t_Sleep_With_The_Fishes_by_DopplerGhost.png"
-          preload="none"
-          className="w-full block"
+          preload="auto"
+          className="w-full [grid-area:1/1]"
+          style={{
+            opacity: active === 0 ? 1 : 0,
+            transition: "opacity 0.35s ease",
+            zIndex: active === 0 ? 1 : 0,
+          }}
         >
-          <source src={trailerVideos[index]} type="video/mp4" />
+          <source src={trailerVideos[active === 0 ? index : nextVideo]} type="video/mp4" />
         </video>
+        <video
+          ref={videoB}
+          muted
+          autoPlay
+          playsInline
+          onEnded={handleEnded}
+          preload="auto"
+          className="w-full [grid-area:1/1]"
+          style={{
+            opacity: active === 1 ? 1 : 0,
+            transition: "opacity 0.35s ease",
+            zIndex: active === 1 ? 1 : 0,
+          }}
+        >
+          <source src={trailerVideos[active === 1 ? index : nextVideo]} type="video/mp4" />
+        </video>
+
+        {/* Controls overlay */}
+        <div
+          className="absolute bottom-2 right-2 z-10 flex gap-1"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {trailerVideos.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                if (i === index) return;
+                setIndex(i);
+                setActive((a) => (a === 0 ? 1 : 0));
+              }}
+              className="w-2 h-2 rounded-full transition-all"
+              style={{
+                background: i === index ? "#60a5fa" : "rgba(255,255,255,0.35)",
+                boxShadow: i === index ? "0 0 6px rgba(96,165,250,0.6)" : "none",
+              }}
+              aria-label={`Video ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
       <p className="mt-2 text-xs text-text-secondary" style={NUNITO}>
-        Don't Sleep With The Fishes — official Steam trailers. Point-and-click survival horror by DopplerGhost.
+        Don&apos;t Sleep With The Fishes — official Steam trailers. Point-and-click survival horror by DopplerGhost.
       </p>
     </div>
   );
