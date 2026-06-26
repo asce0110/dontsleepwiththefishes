@@ -28,11 +28,11 @@ const generalFaq: FAQItem[] = [
   },
   {
     q: "Is Don't Sleep With The Fishes coming to Steam?",
-    a: <>Yes! Don't Sleep With The Fishes <strong>launches on Steam on June 26, 2026</strong>.{" "}
-      <a href="https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors underline">Wishlist now</a>{" "}
-      to get notified on launch day. The Steam version may include custom achievements. See the{" "}
+    a: <>Yes! Don't Sleep With The Fishes <strong>is now available on Steam</strong> as of June 26, 2026.{" "}
+      <a href="https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors underline">Buy on Steam</a>{" "}
+      ($1.99). The Steam version includes achievements and automatic updates. See the{" "}
       <Link href="/steam" className="underline hover:text-amber">Steam page</Link>{" "}
-      for full details and Steam vs itch.io comparison.<br /><br /><span className="text-xs font-bold uppercase tracking-wider" style={{ color: "rgba(52,211,153,0.7)" }}>Source: Official Steam store page + v1.1.2 devlog</span></>,
+      for full Steam vs itch.io comparison.<br /><br /><span className="text-xs font-bold uppercase tracking-wider" style={{ color: "rgba(52,211,153,0.7)" }}>Source: Official Steam store page</span></>,
   },
   {
     q: "Will itch.io buyers get a Steam key?",

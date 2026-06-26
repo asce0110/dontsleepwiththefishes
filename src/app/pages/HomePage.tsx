@@ -337,7 +337,7 @@ export function HomePage() {
 
               {/* Subtitle */}
               <p className="mb-6 text-sm leading-relaxed max-w-md" style={{ ...NUNITO, color: "rgba(122,146,170,1)" }}>
-                Night event counters, item strategies, ending routes, and walkthrough. Updated for v1.1.2. <strong style={{ color: "rgba(26,159,255,0.9)" }}>Now on Steam June 26.</strong>
+                Night event counters, item strategies, ending routes, and walkthrough. Updated for v1.1.2. <strong style={{ color: "rgba(26,159,255,0.9)" }}>Now on Steam.</strong>
               </p>
 
               {/* Stats */}

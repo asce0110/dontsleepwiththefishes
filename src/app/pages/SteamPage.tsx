@@ -11,8 +11,8 @@ const PIRATA: React.CSSProperties = { fontFamily: "'Fredoka', sans-serif", fontW
 
 const faqData = [
   {
-    q: "When is Don't Sleep With The Fishes coming to Steam?",
-    a: "June 26, 2026. Wishlist now to get notified on launch day.",
+    q: "When did Don't Sleep With The Fishes release on Steam?",
+    a: "June 26, 2026. Now available for $1.99 — same price as itch.io.",
   },
   {
     q: "How much does it cost on Steam?",
@@ -20,7 +20,7 @@ const faqData = [
   },
   {
     q: "Will Steam have achievements?",
-    a: "The developer has mentioned custom Steam achievements may be added with the Steam version. Exact achievement list has not been publicly shared yet.",
+    a: "Yes, the Steam version includes achievements. The exact achievement list is available on the Steam store page.",
   },
   {
     q: "Does Steam support cloud saves?",
@@ -36,7 +36,7 @@ const faqData = [
   },
   {
     q: "Any differences between Steam and itch.io versions?",
-    a: "The core game (v1.1.2) is identical. Steam may add achievements and automatic updates. itch.io gives more revenue directly to the developer.",
+    a: "The core game (v1.1.2) is identical. Steam adds achievements, cloud saves, and automatic updates. itch.io gives more revenue directly to the developer.",
   },
 ];
 
@@ -79,8 +79,8 @@ export function SteamPage() {
             <span style={{ background: "linear-gradient(135deg, #1a9fff 0%, #60a5fa 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>on Steam</span>
           </h1>
           <p className="text-sm text-text-secondary leading-relaxed max-w-xl" style={NUNITO}>
-            Don't Sleep With The Fishes launches on Steam on <strong className="text-text-primary">June 26, 2026</strong>.
-            Same game (v1.1.2), now with Steam achievements, automatic updates, and the convenience of your Steam library.
+            Don't Sleep With The Fishes is <strong className="text-text-primary">now available on Steam</strong> as of June 26, 2026.
+            Same game (v1.1.2), now with Steam achievements, cloud saves, automatic updates, and the convenience of your Steam library.
           </p>
         </div>
 
@@ -88,8 +88,8 @@ export function SteamPage() {
         <InfoCard className="mb-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div className="flex-1">
-              <h2 className="text-base font-bold text-text-primary mb-1" style={NUNITO}>Wishlist on Steam</h2>
-              <p className="text-xs text-text-secondary" style={NUNITO}>Get notified the moment it launches. Add to your Steam wishlist now.</p>
+              <h2 className="text-base font-bold text-text-primary mb-1" style={NUNITO}>Buy on Steam</h2>
+              <p className="text-xs text-text-secondary" style={NUNITO}>Now available for $1.99. Same game, with Steam achievements and auto-updates.</p>
             </div>
             <a
               href="https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/"
@@ -98,7 +98,7 @@ export function SteamPage() {
               className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-black transition-all hover:brightness-110 shrink-0"
               style={{ background: "linear-gradient(135deg, #1a9fff, #176fb8)", color: "#fff", fontFamily: "'Nunito', sans-serif", boxShadow: "0 4px 20px rgba(26,159,255,0.30)" }}
             >
-              Wishlist Now <ExternalLink className="h-3.5 w-3.5" />
+              Buy on Steam <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
         </InfoCard>

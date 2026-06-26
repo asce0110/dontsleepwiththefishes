@@ -6,8 +6,8 @@ import { Card } from "../components/ZhCard";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/zh" },
-  title: "Don't Sleep With The Fishes 攻略百科 — Steam 6月26日上线",
-  description: "Don't Sleep With The Fishes（深海勿眠）完整中文生存攻略。35+ 物品、12+ 结局、夜间事件对策。v1.1.2 已更新，Steam 6月26日上线。",
+  title: "Don't Sleep With The Fishes 攻略百科 — 现已上线 Steam",
+  description: "Don't Sleep With The Fishes（深海勿眠）完整中文生存攻略。35+ 物品、12+ 结局、夜间事件对策。v1.1.2 已更新，现已上线 Steam。",
   openGraph: {
     title: "Don't Sleep With The Fishes 攻略百科（中文）",
     description: "完整中文生存攻略。35+ 物品、12+ 结局、夜间事件对策。"
@@ -61,7 +61,7 @@ export default function ZhHomePage() {
 
             {/* Subtitle */}
             <p className="mb-6 text-sm leading-relaxed max-w-md" style={{ ...NUNITO, color: "rgba(122,146,170,1)" }}>
-              夜间事件对策、物品使用策略、结局路线图、通关流程攻略。v1.1.2 最新版本。<strong style={{ color: "rgba(26,159,255,0.9)" }}>Steam 6月26日上线。</strong>
+              夜间事件对策、物品使用策略、结局路线图、通关流程攻略。v1.1.2 最新版本。<strong style={{ color: "rgba(26,159,255,0.9)" }}>现已上线 Steam。</strong>
             </p>
 
             {/* Stats pills */}
@@ -111,7 +111,7 @@ export default function ZhHomePage() {
               <strong style={{ color: "#edf2f7" }}>Don't Sleep With The Fishes</strong> 是一款由 <strong style={{ color: "#edf2f7" }}>DopplerGhost</strong> 开发的 point-and-click 生存恐怖游戏。你被困在一艘正在下沉的船上——迅速收集物品、选择一名船员同伴，在海上度过每一个致命的夜晚。
             </p>
             <p className="text-xs" style={{ color: "rgba(122,146,170,0.75)", ...NUNITO }}>
-              平台：Windows · 当前版本：v1.1.2 · <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="hover:text-amber/60 transition-colors">itch.io 官方</a> · <a href="https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400/60 transition-colors">Steam 6月26日上线</a>
+              平台：Windows · 当前版本：v1.1.2 · <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="hover:text-amber/60 transition-colors">itch.io 官方</a> · <a href="https://store.steampowered.com/app/4834070/Dont_Sleep_With_The_Fishes/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400/60 transition-colors">现已上线 Steam</a>
             </p>
           </div>
         </div>

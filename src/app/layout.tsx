@@ -6,13 +6,13 @@ import "../styles/index.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dontsleepwiththefishes.net"),
   title: {
-    default: "Don't Sleep With The Fishes Guide & Wiki — Now on Steam June 26",
+    default: "Don't Sleep With The Fishes Guide & Wiki — Now on Steam",
     template: "%s",
   },
-  description: "Complete survival guide for Don't Sleep With The Fishes. 35+ items, 12+ endings, night event counters, walkthrough. Updated for v1.1.2. On Steam June 26 — wishlist today.",
+  description: "Complete survival guide for Don't Sleep With The Fishes. 35+ items, 12+ endings, night event counters, walkthrough. Updated for v1.1.2. Now available on Steam.",
   openGraph: {
     title: "Don't Sleep With The Fishes Guide & Wiki — Now on Steam",
-    description: "Complete survival guide. 35+ items, 12+ endings, night event counters, walkthrough. Updated for v1.1.2. On Steam June 26.",
+    description: "Complete survival guide. 35+ items, 12+ endings, night event counters, walkthrough. Updated for v1.1.2. Now available on Steam.",
     type: "website",
     images: ["/og-image.jpg"],
   },
