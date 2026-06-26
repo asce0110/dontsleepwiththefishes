@@ -97,7 +97,7 @@ export function ItemsPage() {
             ].map(({ p, desc }) => (
               <span key={p} className="inline-flex items-center gap-1.5">
                 <PriorityBadge p={p} />
-                <span className="text-text-tertiary">{desc}</span>
+                <span className="text-text-secondary">{desc}</span>
               </span>
             ))}
           </div>
@@ -116,13 +116,13 @@ export function ItemsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 700 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Item</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Source</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Best Use</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Event Counter</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden lg:table-cell" style={NUNITO}>Ending Use</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Pri</th>
-                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Source</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Item</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Source</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Best Use</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>Event Counter</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden lg:table-cell" style={NUNITO}>Ending Use</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Pri</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Source</th>
                 </tr>
               </thead>
               <tbody>
@@ -139,10 +139,10 @@ export function ItemsPage() {
                         )}
                       </div>
                     </td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden sm:table-cell" style={NUNITO}>{row.source}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.source}</td>
                     <td className="py-3 pr-3 text-xs text-text-secondary" style={NUNITO}>{row.bestUse}</td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden md:table-cell" style={NUNITO}>{row.eventCounter}</td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden lg:table-cell" style={NUNITO}>{row.endingUse}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.eventCounter}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden lg:table-cell" style={NUNITO}>{row.endingUse}</td>
                     <td className="py-3 pr-3"><PriorityBadge p={row.priority} /></td>
                     <td className="py-3"><SourceBadge source={row.confidence} /></td>
                   </tr>
@@ -169,9 +169,9 @@ export function ItemsPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                  <div className="text-xs text-text-tertiary">{desc}</div>
+                  <div className="text-xs text-text-secondary">{desc}</div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>
@@ -219,9 +219,9 @@ export function ItemsPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                  <div className="text-xs text-text-tertiary">{desc}</div>
+                  <div className="text-xs text-text-secondary">{desc}</div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>

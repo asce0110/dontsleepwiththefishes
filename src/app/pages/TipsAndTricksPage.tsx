@@ -91,9 +91,9 @@ export function TipsAndTricksPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Tip</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Why It Helps</th>
-                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Tip</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Why It Helps</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Src</th>
                 </tr>
               </thead>
               <tbody>
@@ -144,10 +144,10 @@ export function TipsAndTricksPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Shipmate</th>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Support Use</th>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Best Day Plan</th>
-                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Src</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Shipmate</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Support Use</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Best Day Plan</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Src</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -155,7 +155,7 @@ export function TipsAndTricksPage() {
                     <tr key={row.name}>
                       <td className="py-2.5 pr-3 text-sm font-bold text-text-primary" style={NUNITO}>{row.name}</td>
                       <td className="py-2.5 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.support}</td>
-                      <td className="py-2.5 pr-3 text-xs text-text-tertiary hidden sm:table-cell" style={NUNITO}>{row.bestDay}</td>
+                      <td className="py-2.5 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.bestDay}</td>
                       <td className="py-2.5"><SourceBadge source={row.confidence} /></td>
                     </tr>
                   ))}
@@ -195,7 +195,7 @@ export function TipsAndTricksPage() {
                 If you are trying for a rescue route, avoid wasting your Flare Gun. Community reports suggest using Flashlight first and saving Flare Gun for stronger rescue opportunities. Official v1.1.2 notes confirm rescue ending chance was slightly increased.
               </p>
               <div className="flex items-center gap-2">
-                <SourceBadge source="Community" /> <span className="text-xs text-text-tertiary">+ Official rescue chance update</span>
+                <SourceBadge source="Community" /> <span className="text-xs text-text-secondary">+ Official rescue chance update</span>
               </div>
             </InfoCard>
 
@@ -213,7 +213,7 @@ export function TipsAndTricksPage() {
                 Chests can be valuable, but they are not free. Open them when you can afford the energy cost and when a missing utility item would improve your night-event coverage. Official v1.1.2 notes confirm Treasure Chest drop pool adjustments.
               </p>
               <div className="flex items-center gap-2">
-                <SourceBadge source="Community" /> <span className="text-xs text-text-tertiary">+ Official chest pool update</span>
+                <SourceBadge source="Community" /> <span className="text-xs text-text-secondary">+ Official chest pool update</span>
               </div>
             </InfoCard>
           </div>
@@ -249,9 +249,9 @@ export function TipsAndTricksPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                  <div className="text-xs text-text-tertiary">{desc}</div>
+                  <div className="text-xs text-text-secondary">{desc}</div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>

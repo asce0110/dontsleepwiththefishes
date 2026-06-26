@@ -125,9 +125,9 @@ export function ZhAchievementsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>功能</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>当前状态</th>
-                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>来源</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>功能</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>当前状态</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>来源</th>
                 </tr>
               </thead>
               <tbody>
@@ -150,18 +150,18 @@ export function ZhAchievementsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 650 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>目标</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>类别</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>如何追踪</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>攻略</th>
-                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>来源</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>目标</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>类别</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>如何追踪</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>攻略</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>来源</th>
                 </tr>
               </thead>
               <tbody>
                 {goals.map((row, i) => (
                   <tr key={row.goal} style={{ borderBottom: i < goals.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
                     <td className="py-3 pr-3 text-sm font-bold text-text-primary" style={NUNITO}>{row.goal}</td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden sm:table-cell" style={NUNITO}>{row.category}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.category}</td>
                     <td className="py-3 pr-3 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.howToTrack}</td>
                     <td className="py-3 pr-3">
                       <Link href={row.guideUrl} className="text-xs font-bold text-amber/80 hover:text-amber transition-colors" style={NUNITO}>{row.guideLabel}</Link>
@@ -184,10 +184,10 @@ export function ZhAchievementsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 550 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>结局 / 路线</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>已确认？</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>剧透</th>
-                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>攻略</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>结局 / 路线</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>已确认？</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>剧透</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>攻略</th>
                 </tr>
               </thead>
               <tbody>
@@ -195,7 +195,7 @@ export function ZhAchievementsPage() {
                   <tr key={row.ending} style={{ borderBottom: i < endingTracker.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
                     <td className="py-3 pr-3 text-sm font-bold text-text-primary" style={NUNITO}>{row.ending}</td>
                     <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.confirmed}</td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden md:table-cell" style={NUNITO}>{row.spoiler}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.spoiler}</td>
                     <td className="py-3">
                       <Link href={row.guideUrl} className="text-xs font-bold text-amber/80 hover:text-amber transition-colors" style={NUNITO}>{row.guideLabel}</Link>
                     </td>
@@ -213,7 +213,7 @@ export function ZhAchievementsPage() {
             公开的 Steam 成就列表<strong className="text-text-primary">尚未发布</strong>。开发者表示下一个主要目标是 Steam 移植，itch 页面的一条评论提到自定义 Steam 成就可能是移植的一部分。在 Steam 页面上线之前，本节仅追踪状态，不将成就列为已确认。
           </p>
           <div className="mt-2 flex items-center gap-2">
-            <SourceBadge source="Official" /> <span className="text-xs text-text-tertiary">尚未发布</span>
+            <SourceBadge source="Official" /> <span className="text-xs text-text-secondary">尚未发布</span>
           </div>
         </InfoCard>
 
@@ -256,9 +256,9 @@ export function ZhAchievementsPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                  <div className="text-xs text-text-tertiary">{desc}</div>
+                  <div className="text-xs text-text-secondary">{desc}</div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>

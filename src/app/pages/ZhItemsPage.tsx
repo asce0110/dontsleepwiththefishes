@@ -91,7 +91,7 @@ export function ZhItemsPage() {
               { p: "B", desc: "场景型 — 取决于路线" },
               { p: "C", desc: "有限 / 未知" },
             ].map(({ p, desc }) => (
-              <span key={p} className="inline-flex items-center gap-1.5"><PriorityBadge p={p} /><span className="text-text-tertiary">{desc}</span></span>
+              <span key={p} className="inline-flex items-center gap-1.5"><PriorityBadge p={p} /><span className="text-text-secondary">{desc}</span></span>
             ))}
           </div>
           <div className="flex flex-wrap items-center gap-3 mt-3 text-xs" style={NUNITO}>
@@ -108,13 +108,13 @@ export function ZhItemsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 700 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>物品</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>来源</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>最佳用途</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>事件对策</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden lg:table-cell" style={NUNITO}>结局用途</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>优先级</th>
-                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>来源</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>物品</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>来源</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>最佳用途</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>事件对策</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden lg:table-cell" style={NUNITO}>结局用途</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>优先级</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>来源</th>
                 </tr>
               </thead>
               <tbody>
@@ -123,10 +123,10 @@ export function ZhItemsPage() {
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(245,158,11,0.03)"; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}>
                     <td className="py-3 pr-3"><div><span className="text-sm font-bold text-text-primary" style={NUNITO}>{row.item}</span>{row.v112Change && <span className="block text-xs mt-0.5" style={{ color: "rgba(52,211,153,0.7)" }}>{row.v112Change}</span>}</div></td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden sm:table-cell" style={NUNITO}>{row.source}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.source}</td>
                     <td className="py-3 pr-3 text-xs text-text-secondary" style={NUNITO}>{row.bestUse}</td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden md:table-cell" style={NUNITO}>{row.eventCounter}</td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden lg:table-cell" style={NUNITO}>{row.endingUse}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.eventCounter}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden lg:table-cell" style={NUNITO}>{row.endingUse}</td>
                     <td className="py-3 pr-3"><PriorityBadge p={row.priority} /></td>
                     <td className="py-3"><SourceBadge source={row.confidence} /></td>
                   </tr>
@@ -150,8 +150,8 @@ export function ZhItemsPage() {
               <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
-                <div><div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div><div className="text-xs text-text-tertiary">{desc}</div></div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <div><div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div><div className="text-xs text-text-secondary">{desc}</div></div>
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>
@@ -191,8 +191,8 @@ export function ZhItemsPage() {
               <Link key={label} href={href} className="group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 transition-all duration-200" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(245,158,11,0.30)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
-                <div><div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div><div className="text-xs text-text-tertiary">{desc}</div></div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <div><div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div><div className="text-xs text-text-secondary">{desc}</div></div>
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>

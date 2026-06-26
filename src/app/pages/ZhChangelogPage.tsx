@@ -204,19 +204,19 @@ export function ZhChangelogPage() {
         <InfoCard className="mb-6">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 text-sm" style={NUNITO}>
             <div>
-              <span className="block text-xs font-black uppercase tracking-widest text-text-tertiary mb-1">游戏版本</span>
+              <span className="block text-xs font-black uppercase tracking-widest text-text-secondary mb-1">游戏版本</span>
               <span className="text-text-primary font-bold">v1.1.2</span>
             </div>
             <div>
-              <span className="block text-xs font-black uppercase tracking-widest text-text-tertiary mb-1">最后百科审查</span>
+              <span className="block text-xs font-black uppercase tracking-widest text-text-secondary mb-1">最后百科审查</span>
               <span className="text-text-primary font-bold">2026-06-08</span>
             </div>
             <div>
-              <span className="block text-xs font-black uppercase tracking-widest text-text-tertiary mb-1">来源标签</span>
+              <span className="block text-xs font-black uppercase tracking-widest text-text-secondary mb-1">来源标签</span>
               <span className="text-text-primary font-bold">官方 &middot; 已验证 &middot; 社区 &middot; 未验证</span>
             </div>
             <div>
-              <span className="block text-xs font-black uppercase tracking-widest text-text-tertiary mb-1">官方页面</span>
+              <span className="block text-xs font-black uppercase tracking-widest text-text-secondary mb-1">官方页面</span>
               <a href="https://dopplerghost.itch.io/dont-sleep-with-the-fishes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-amber/80 hover:text-amber transition-colors font-bold">
                 itch.io <ExternalLink className="h-3 w-3" />
               </a>
@@ -246,7 +246,7 @@ export function ZhChangelogPage() {
 
                   {/* Affected pages */}
                   <div className="flex flex-wrap items-center gap-1.5 mb-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-text-tertiary">影响范围：</span>
+                    <span className="text-xs font-bold uppercase tracking-wider text-text-secondary">影响范围：</span>
                     {entry.affectedPages.map((page) => (
                       <Link key={page.href} href={page.href} className="rounded-full px-2 py-0.5 text-xs font-bold transition-colors hover:text-amber" style={{ background: "rgba(245,158,11,0.06)", border: "1px solid rgba(245,158,11,0.12)", color: "rgba(245,158,11,0.65)", ...NUNITO }}>
                         {page.label}
@@ -255,7 +255,7 @@ export function ZhChangelogPage() {
                   </div>
 
                   {/* Source & Status */}
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-tertiary" style={NUNITO}>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-text-secondary" style={NUNITO}>
                     <span>来源：<strong className="text-text-secondary">{entry.source}</strong></span>
                     <span>状态：<strong className="text-text-secondary">{entry.status}</strong></span>
                     {entry.officialLink && (
@@ -286,16 +286,16 @@ export function ZhChangelogPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>官方变更</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>受影响页面</th>
-                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>行动</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>官方变更</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>受影响页面</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>行动</th>
                 </tr>
               </thead>
               <tbody>
                 {patchImpactTable.map((row, i) => (
                   <tr key={row.change} style={{ borderBottom: i < patchImpactTable.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
                     <td className="py-3 pr-3 text-xs font-bold text-text-primary" style={NUNITO}>{row.change}</td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden sm:table-cell" style={NUNITO}>{row.pages}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.pages}</td>
                     <td className="py-3 text-xs hidden md:table-cell" style={{ color: "rgba(52,211,153,0.8)", ...NUNITO }}>{row.action}</td>
                   </tr>
                 ))}
@@ -331,9 +331,9 @@ export function ZhChangelogPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                  <div className="text-xs text-text-tertiary">{desc}</div>
+                  <div className="text-xs text-text-secondary">{desc}</div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>

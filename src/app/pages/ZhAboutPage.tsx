@@ -149,9 +149,9 @@ export function ZhAboutPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>标签</th>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>含义</th>
-                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>示例</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>标签</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>含义</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>示例</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -159,7 +159,7 @@ export function ZhAboutPage() {
                     <tr key={row.label} style={{ borderBottom: i < sourceLabels.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
                       <td className="py-2.5 pr-3"><SourceBadge source={row.label as "Official" | "Verified" | "Community" | "Unverified"} /></td>
                       <td className="py-2.5 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.meaning}</td>
-                      <td className="py-2.5 text-xs text-text-tertiary hidden md:table-cell" style={NUNITO}>{row.example}</td>
+                      <td className="py-2.5 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.example}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -193,8 +193,8 @@ export function ZhAboutPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 350 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>页面类型</th>
-                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>优先级</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>页面类型</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>优先级</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -207,7 +207,7 @@ export function ZhAboutPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-text-tertiary" style={NUNITO}>当前攻略目标版本：v1.1.2 &middot; 最后审核：2026-06-08</p>
+            <p className="text-xs text-text-secondary" style={NUNITO}>当前攻略目标版本：v1.1.2 &middot; 最后审核：2026-06-08</p>
           </InfoCard>
 
           {/* Spoiler Policy */}
@@ -220,8 +220,8 @@ export function ZhAboutPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 400 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>级别</th>
-                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>含义</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>级别</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>含义</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -251,7 +251,7 @@ export function ZhAboutPage() {
               </a>
             </div>
             <div className="mt-3 pt-3 border-t" style={{ borderColor: "rgba(15,31,56,0.5)" }}>
-              <p className="text-xs text-text-tertiary leading-relaxed" style={NUNITO}>
+              <p className="text-xs text-text-secondary leading-relaxed" style={NUNITO}>
                 截图用于攻略说明，应限制在必要范围内。社区百科页面可作为研究线索，但本站不会复制 Fandom 文章。社区来源的机制被重写，适当标注出处，并在可能时单独验证。
               </p>
             </div>
@@ -270,7 +270,7 @@ export function ZhAboutPage() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-xs text-text-tertiary" style={NUNITO}>
+            <p className="mt-3 text-xs text-text-secondary" style={NUNITO}>
               如需修正、路线证明或来源更新，请通过网站联系表单联系我们，或在相关攻略页面评论区可用时留言。
             </p>
           </InfoCard>
@@ -281,7 +281,7 @@ export function ZhAboutPage() {
             <p className="text-sm text-text-secondary leading-relaxed" style={NUNITO}>
               如果你发现过时信息、未验证路线或缺失的事件对策，请发送游戏版本、事件名称、使用物品、结果，以及尽可能提供截图或视频证据。
             </p>
-            <p className="mt-2 text-xs text-text-tertiary" style={NUNITO}>
+            <p className="mt-2 text-xs text-text-secondary" style={NUNITO}>
               如需修正、路线证明或来源更新，请通过网站联系表单联系我们，或在相关攻略页面评论区可用时留言。
             </p>
           </InfoCard>
@@ -305,9 +305,9 @@ export function ZhAboutPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                  <div className="text-xs text-text-tertiary">{desc}</div>
+                  <div className="text-xs text-text-secondary">{desc}</div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>

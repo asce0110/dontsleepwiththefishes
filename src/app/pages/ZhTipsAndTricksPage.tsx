@@ -91,9 +91,9 @@ export function ZhTipsAndTricksPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 600 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>技巧</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>为什么有帮助</th>
-                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>来源</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>技巧</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>为什么有帮助</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>来源</th>
                 </tr>
               </thead>
               <tbody>
@@ -144,10 +144,10 @@ export function ZhTipsAndTricksPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>船员</th>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>支援用途</th>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>最佳当日计划</th>
-                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>来源</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>船员</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>支援用途</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>最佳当日计划</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>来源</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -155,7 +155,7 @@ export function ZhTipsAndTricksPage() {
                     <tr key={row.name}>
                       <td className="py-2.5 pr-3 text-sm font-bold text-text-primary" style={NUNITO}>{row.name}</td>
                       <td className="py-2.5 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.support}</td>
-                      <td className="py-2.5 pr-3 text-xs text-text-tertiary hidden sm:table-cell" style={NUNITO}>{row.bestDay}</td>
+                      <td className="py-2.5 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.bestDay}</td>
                       <td className="py-2.5"><SourceBadge source={row.confidence} /></td>
                     </tr>
                   ))}
@@ -195,7 +195,7 @@ export function ZhTipsAndTricksPage() {
                 如果你正尝试走救援路线，避免浪费你的 Flare Gun。社区报告建议先使用 Flashlight，将 Flare Gun 留到更强的救援机会。官方 v1.1.2 说明确认救援结局概率略微提高。
               </p>
               <div className="flex items-center gap-2">
-                <SourceBadge source="Community" /> <span className="text-xs text-text-tertiary">+ 官方救援概率更新</span>
+                <SourceBadge source="Community" /> <span className="text-xs text-text-secondary">+ 官方救援概率更新</span>
               </div>
             </InfoCard>
 
@@ -213,7 +213,7 @@ export function ZhTipsAndTricksPage() {
                 宝箱可能有价值，但并非免费。当你能承受体力消耗且缺少的实用物品能改善夜间事件覆盖时才开启。官方 v1.1.2 说明确认宝箱掉落池有所调整。
               </p>
               <div className="flex items-center gap-2">
-                <SourceBadge source="Community" /> <span className="text-xs text-text-tertiary">+ 官方宝箱池更新</span>
+                <SourceBadge source="Community" /> <span className="text-xs text-text-secondary">+ 官方宝箱池更新</span>
               </div>
             </InfoCard>
           </div>
@@ -249,9 +249,9 @@ export function ZhTipsAndTricksPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                  <div className="text-xs text-text-tertiary">{desc}</div>
+                  <div className="text-xs text-text-secondary">{desc}</div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>

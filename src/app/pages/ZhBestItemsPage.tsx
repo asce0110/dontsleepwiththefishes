@@ -57,10 +57,10 @@ export function ZhBestItemsPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 550 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>等级</th>
-                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>物品</th>
-                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>理由</th>
-                    <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>来源</th>
+                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>等级</th>
+                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>物品</th>
+                    <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>理由</th>
+                    <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>来源</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -68,7 +68,7 @@ export function ZhBestItemsPage() {
                     <tr key={`${row.tier}-${row.items}`} style={{ borderBottom: i < tierList.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
                       <td className="py-3 pr-3 text-sm font-bold" style={{ color: row.tier === "S 级" ? "rgba(245,158,11,0.9)" : row.tier === "A 级" ? "rgba(52,211,153,0.9)" : row.tier === "B 级" ? "rgba(96,165,250,0.9)" : "rgba(122,146,170,0.9)", ...NUNITO }}>{row.tier}</td>
                       <td className="py-3 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.items}</td>
-                      <td className="py-3 pr-3 text-xs text-text-tertiary hidden md:table-cell" style={NUNITO}>{row.reason}</td>
+                      <td className="py-3 pr-3 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.reason}</td>
                       <td className="py-3"><SourceBadge source={row.confidence} /></td>
                     </tr>
                   ))}
@@ -104,9 +104,9 @@ export function ZhBestItemsPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                  <div className="text-xs text-text-tertiary">{desc}</div>
+                  <div className="text-xs text-text-secondary">{desc}</div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>

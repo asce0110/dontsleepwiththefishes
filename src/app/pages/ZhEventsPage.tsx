@@ -176,7 +176,7 @@ export function ZhEventsPage() {
           {/* Badges row */}
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "rgba(245,158,11,0.55)" }}>剧透等级：中等</span>
-            <span className="text-xs text-text-tertiary">|</span>
+            <span className="text-xs text-text-secondary">|</span>
             <SourceBadge source="Official" />
             <SourceBadge source="Community" />
             <SourceBadge source="Unverified" />
@@ -208,12 +208,12 @@ export function ZhEventsPage() {
             <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 800 }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>事件</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>最佳对策</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>备选</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden lg:table-cell" style={NUNITO}>避免</th>
-                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden xl:table-cell" style={NUNITO}>搜索意图</th>
-                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>来源</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>事件</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>最佳对策</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>备选</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden lg:table-cell" style={NUNITO}>避免</th>
+                  <th className="py-2.5 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden xl:table-cell" style={NUNITO}>搜索意图</th>
+                  <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>来源</th>
                 </tr>
               </thead>
               <tbody>
@@ -229,9 +229,9 @@ export function ZhEventsPage() {
                       </Link>
                     </td>
                     <td className="py-3 pr-3 text-xs text-text-secondary" style={NUNITO}>{row.bestCounter}</td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden md:table-cell" style={NUNITO}>{row.backup}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.backup}</td>
                     <td className="py-3 pr-3 text-xs hidden lg:table-cell" style={{ color: "rgba(248,113,113,0.80)", ...NUNITO }}>{row.avoid}</td>
-                    <td className="py-3 pr-3 text-xs text-text-tertiary hidden xl:table-cell" style={NUNITO}>{row.searchIntent}</td>
+                    <td className="py-3 pr-3 text-xs text-text-secondary hidden xl:table-cell" style={NUNITO}>{row.searchIntent}</td>
                     <td className="py-3"><SourceBadge source={row.confidence} /></td>
                   </tr>
                 ))}
@@ -294,10 +294,10 @@ export function ZhEventsPage() {
                   <span style={{ color: "rgba(245,158,11,0.4)" }}>{icon}</span>
                   <div>
                     <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                    <div className="text-xs text-text-tertiary">{desc}</div>
+                    <div className="text-xs text-text-secondary">{desc}</div>
                   </div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>

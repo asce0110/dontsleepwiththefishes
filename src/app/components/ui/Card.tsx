@@ -39,9 +39,9 @@ export function NavCard({ title, description, icon, href, badge }: NavCardProps)
             <span className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors duration-200">{title}</span>
             {badge && <span className="shrink-0 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide" style={{ background: "rgba(245,158,11,0.12)", color: "#f59e0b", border: "1px solid rgba(245,158,11,0.25)" }}>{badge}</span>}
           </div>
-          <p className="text-xs text-text-tertiary leading-relaxed">{description}</p>
+          <p className="text-xs text-text-secondary leading-relaxed">{description}</p>
         </div>
-        <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-text-muted transition-all duration-200 group-hover:text-amber group-hover:translate-x-0.5" />
+        <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-text-secondary transition-all duration-200 group-hover:text-amber group-hover:translate-x-0.5" />
       </Link>
     </motion.div>
   );

@@ -122,7 +122,7 @@ export function GettingStartedPage() {
                 <div key={mate.name} className="rounded-xl border p-3" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,14,28,1)" }}>
                   <div className="text-sm font-bold text-text-primary mb-0.5">{mate.name}</div>
                   <div className="text-xs font-bold uppercase tracking-wider text-amber/60 mb-1">{mate.role}</div>
-                  <div className="text-xs text-text-tertiary leading-relaxed">{mate.effect}</div>
+                  <div className="text-xs text-text-secondary leading-relaxed">{mate.effect}</div>
                 </div>
               ))}
             </div>
@@ -157,9 +157,9 @@ export function GettingStartedPage() {
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                   <div>
                     <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                    <div className="text-xs text-text-tertiary">{desc}</div>
+                    <div className="text-xs text-text-secondary">{desc}</div>
                   </div>
-                  <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                  <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
                 </Link>
               ))}
             </div>

@@ -123,7 +123,7 @@ function CardWalkthrough({ style }: { style?: React.CSSProperties }) {
             <Map className="h-5 w-5 text-amber" />
           </div>
           <h3 className="mb-1.5 text-text-primary group-hover:text-amber transition-colors" style={{ ...PIRATA, fontSize: "1.2rem" }}>Walkthrough</h3>
-          <p className="text-xs text-text-tertiary leading-relaxed" style={NUNITO}>Day-by-day survival route to rescue</p>
+          <p className="text-xs text-text-secondary leading-relaxed" style={NUNITO}>Day-by-day survival route to rescue</p>
         </div>
         <div className="mt-5 flex items-center justify-between">
           <span className="text-xs font-bold uppercase tracking-widest text-amber/40" style={NUNITO}>Spoiler-Aware</span>
@@ -149,7 +149,7 @@ function CardItems({ style }: { style?: React.CSSProperties }) {
       </div>
       <div>
         <h3 className="mb-0.5 text-text-primary group-hover:text-blue-300 transition-colors" style={{ ...PIRATA, fontSize: "1.05rem" }}>Items Guide</h3>
-        <p className="text-xs text-text-muted leading-relaxed" style={NUNITO}>Uses, sources &amp; best picks</p>
+        <p className="text-xs text-text-secondary leading-relaxed" style={NUNITO}>Uses, sources &amp; best picks</p>
       </div>
     </Link>
   );
@@ -178,7 +178,7 @@ function CardEndings({ style }: { style?: React.CSSProperties }) {
       </div>
       <div>
         <h3 className="mb-0.5 group-hover:text-red-400 transition-colors" style={{ ...PIRATA, fontSize: "1.1rem", color: "rgba(252,165,165,0.95)" }}>Endings Guide</h3>
-        <p className="text-xs text-text-muted leading-relaxed" style={NUNITO}>12+ outcomes — rescue, death &amp; secrets</p>
+        <p className="text-xs text-text-secondary leading-relaxed" style={NUNITO}>12+ outcomes — rescue, death &amp; secrets</p>
       </div>
     </Link>
   );
@@ -198,7 +198,7 @@ function CardEvents({ style }: { style?: React.CSSProperties }) {
       </div>
       <div>
         <h3 className="mb-0.5 text-amber/90 group-hover:text-amber transition-colors" style={{ ...PIRATA, fontSize: "1.05rem" }}>Events Guide</h3>
-        <p className="text-xs text-text-muted leading-relaxed" style={NUNITO}>Night event counters &amp; survival</p>
+        <p className="text-xs text-text-secondary leading-relaxed" style={NUNITO}>Night event counters &amp; survival</p>
       </div>
     </Link>
   );
@@ -222,11 +222,11 @@ function CardSmall({ href, icon, title, desc, accent = "amber", style }: {
         <div className="flex h-8 w-8 items-center justify-center rounded-lg" style={{ background: colors.iconBg, border: `1px solid ${colors.iconBorder}` }}>
           <span style={{ color: colors.iconColor }} className="[&>svg]:h-4 [&>svg]:w-4">{icon}</span>
         </div>
-        <ChevronRight className="h-3.5 w-3.5 text-text-muted group-hover:translate-x-0.5 transition-all" style={{ color: colors.iconColor + "66" }} />
+        <ChevronRight className="h-3.5 w-3.5 text-text-secondary group-hover:translate-x-0.5 transition-all" style={{ color: colors.iconColor + "66" }} />
       </div>
       <div>
         <div className="text-sm font-bold mb-0.5 text-text-primary" style={NUNITO}>{title}</div>
-        <p className="text-xs text-text-muted leading-relaxed" style={NUNITO}>{desc}</p>
+        <p className="text-xs text-text-secondary leading-relaxed" style={NUNITO}>{desc}</p>
       </div>
     </Link>
   );
@@ -448,9 +448,9 @@ export function HomePage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse" }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Event</th>
-                    <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Best Counter</th>
-                    <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Search Intent</th>
+                    <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Event</th>
+                    <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Best Counter</th>
+                    <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Search Intent</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -465,7 +465,7 @@ export function HomePage() {
                         </div>
                       </td>
                       <td className="py-3 pr-4 text-sm text-text-secondary" style={NUNITO}>{row.bestPage}</td>
-                      <td className="py-3 pr-4 text-xs text-text-tertiary hidden sm:table-cell" style={NUNITO}>{row.intent}</td>
+                      <td className="py-3 pr-4 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.intent}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -502,7 +502,7 @@ export function HomePage() {
                   <span className="h-2 w-2 rounded-full shrink-0" style={{ background: item.accent, boxShadow: `0 0 6px ${item.accent}44` }} />
                   <div>
                     <div className="text-sm font-bold text-text-primary group-hover:text-text-primary transition-colors" style={NUNITO}>{item.type}</div>
-                    <div className="text-xs text-text-tertiary" style={NUNITO}>{item.guide}</div>
+                    <div className="text-xs text-text-secondary" style={NUNITO}>{item.guide}</div>
                   </div>
                 </Link>
               ))}

@@ -114,13 +114,13 @@ export function ZhSteamPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>功能</th>
-                    <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>
+                    <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>功能</th>
+                    <th className="py-2.5 pr-4 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>
                       <span className="inline-flex items-center gap-1.5">
                         <Monitor className="h-3 w-3 text-blue-400" /> Steam
                       </span>
                     </th>
-                    <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>
+                    <th className="py-2.5 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>
                       <span className="inline-flex items-center gap-1.5">
                         <Globe className="h-3 w-3 text-amber/60" /> itch.io
                       </span>
@@ -172,9 +172,9 @@ export function ZhSteamPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                  <div className="text-xs text-text-tertiary">{desc}</div>
+                  <div className="text-xs text-text-secondary">{desc}</div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>

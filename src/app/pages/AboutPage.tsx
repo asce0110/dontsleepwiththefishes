@@ -149,9 +149,9 @@ export function AboutPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 500 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Label</th>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary hidden sm:table-cell" style={NUNITO}>Meaning</th>
-                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary hidden md:table-cell" style={NUNITO}>Example</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Label</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary hidden sm:table-cell" style={NUNITO}>Meaning</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary hidden md:table-cell" style={NUNITO}>Example</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -159,7 +159,7 @@ export function AboutPage() {
                     <tr key={row.label} style={{ borderBottom: i < sourceLabels.length - 1 ? "1px solid rgba(15,31,56,0.5)" : "none" }}>
                       <td className="py-2.5 pr-3"><SourceBadge source={row.label as "Official" | "Verified" | "Community" | "Unverified"} /></td>
                       <td className="py-2.5 pr-3 text-xs text-text-secondary hidden sm:table-cell" style={NUNITO}>{row.meaning}</td>
-                      <td className="py-2.5 text-xs text-text-tertiary hidden md:table-cell" style={NUNITO}>{row.example}</td>
+                      <td className="py-2.5 text-xs text-text-secondary hidden md:table-cell" style={NUNITO}>{row.example}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -193,8 +193,8 @@ export function AboutPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 350 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Page Type</th>
-                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Priority</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Page Type</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Priority</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -207,7 +207,7 @@ export function AboutPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-text-tertiary" style={NUNITO}>Current guide target version: v1.1.2 &middot; Last reviewed: 2026-06-08</p>
+            <p className="text-xs text-text-secondary" style={NUNITO}>Current guide target version: v1.1.2 &middot; Last reviewed: 2026-06-08</p>
           </InfoCard>
 
           {/* Spoiler Policy */}
@@ -220,8 +220,8 @@ export function AboutPage() {
               <table className="w-full text-left" style={{ borderCollapse: "collapse", minWidth: 400 }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid rgba(15,31,56,1)" }}>
-                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Level</th>
-                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-tertiary" style={NUNITO}>Meaning</th>
+                    <th className="py-2 pr-3 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Level</th>
+                    <th className="py-2 text-xs font-black uppercase tracking-widest text-text-secondary" style={NUNITO}>Meaning</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -251,7 +251,7 @@ export function AboutPage() {
               </a>
             </div>
             <div className="mt-3 pt-3 border-t" style={{ borderColor: "rgba(15,31,56,0.5)" }}>
-              <p className="text-xs text-text-tertiary leading-relaxed" style={NUNITO}>
+              <p className="text-xs text-text-secondary leading-relaxed" style={NUNITO}>
                 Screenshots are used for guide explanation and should be limited to what is necessary. Community wiki pages may be used as research leads, but this site does not copy Fandom articles. Community-sourced mechanics are rewritten, attributed where appropriate, and verified separately when possible.
               </p>
             </div>
@@ -270,7 +270,7 @@ export function AboutPage() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-xs text-text-tertiary" style={NUNITO}>
+            <p className="mt-3 text-xs text-text-secondary" style={NUNITO}>
               For corrections, route proof, or source updates, contact us through the site contact form or leave a note on the relevant guide page when comments are available.
             </p>
           </InfoCard>
@@ -281,7 +281,7 @@ export function AboutPage() {
             <p className="text-sm text-text-secondary leading-relaxed" style={NUNITO}>
               If you find outdated information, an unverified route, or a missing event counter, please send the game version, event name, item used, outcome, and screenshot or video proof when possible.
             </p>
-            <p className="mt-2 text-xs text-text-tertiary" style={NUNITO}>
+            <p className="mt-2 text-xs text-text-secondary" style={NUNITO}>
               For corrections, route proof, or source updates, contact us through the site contact form or leave a note on the relevant guide page when comments are available.
             </p>
           </InfoCard>
@@ -305,9 +305,9 @@ export function AboutPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(15,31,56,1)"; }}>
                 <div>
                   <div className="text-sm font-medium text-text-primary group-hover:text-amber transition-colors">{label}</div>
-                  <div className="text-xs text-text-tertiary">{desc}</div>
+                  <div className="text-xs text-text-secondary">{desc}</div>
                 </div>
-                <ChevronRight className="h-4 w-4 shrink-0 text-text-muted group-hover:text-amber transition-colors" />
+                <ChevronRight className="h-4 w-4 shrink-0 text-text-secondary group-hover:text-amber transition-colors" />
               </Link>
             ))}
           </div>
