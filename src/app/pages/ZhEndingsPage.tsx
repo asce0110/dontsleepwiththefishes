@@ -37,7 +37,7 @@ export function ZhEndingsPage() {
         title="结局攻略：全部结局与条件"
         description="Don't Sleep With The Fishes 结局攻略：12+ 种结局——救援、真结局、还债、幽灵船、坏结局和隐藏秘密。每条路线均有来源可信度标签。"
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">

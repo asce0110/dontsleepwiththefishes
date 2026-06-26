@@ -33,7 +33,7 @@ export function ZhGiantSquidPage() {
         description="了解在 Don't Sleep With The Fishes 中巨型鱿鱼出现时该怎么做，包括锚对策、还债提示、海洋之心路线和真结局笔记。"
        
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
 
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">

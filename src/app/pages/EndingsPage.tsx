@@ -38,7 +38,7 @@ export function EndingsPage() {
         description="Don't Sleep With The Fishes endings guide: all 12+ outcomes — rescue, true ending, pay debt, ghost ship, bad endings, and hidden secrets. Source confidence labels for every route."
        
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">

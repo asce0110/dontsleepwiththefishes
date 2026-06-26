@@ -23,7 +23,7 @@ export function ZhCaptainWhiskersPage() {
         title="Captain Whiskers（威斯克船长）攻略"
         description="了解 Don't Sleep With The Fishes 中 Captain Whiskers 的作用、v1.1.2 对钓鱼几率的改动以及这只猫是否值得带上船。"
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>

@@ -23,7 +23,7 @@ export function ZhTrueEndingPage() {
         title="真结局攻略：条件、理论与追踪"
         description="追踪 Don't Sleep With The Fishes 的真结局条件、海洋之心线索、还债关联、剧透警告以及已验证路线状态。"
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>

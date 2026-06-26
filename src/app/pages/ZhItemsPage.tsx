@@ -60,7 +60,7 @@ export function ZhItemsPage() {
         title="物品攻略: 用途、来源 & 最佳选择"
         description="Don't Sleep With The Fishes 物品攻略: 每件物品、来源、最佳用途、事件对策、结局优先级和 v1.1.2 变更。S 级到 C 级排名，附来源可信度标注。"
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>

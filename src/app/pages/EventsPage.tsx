@@ -151,7 +151,7 @@ export function EventsPage() {
       />
       <EventFAQSchema />
 
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
 
         {/* Header */}
         <div className="mb-8">

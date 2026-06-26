@@ -153,7 +153,7 @@ export function ZhCharactersPage() {
         title="角色与船员 — 该救谁"
         description="对比 Don't Sleep With The Fishes 中全部 4 名船员。Laurel、Frederik、Row 和 Captain Whiskers——能力、支援行动、最佳路线及社区投票。"
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
 
         {/* Header */}
         <div className="mb-10">

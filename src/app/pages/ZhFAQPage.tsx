@@ -113,7 +113,7 @@ export function ZhFAQPage() {
         description="Don't Sleep With The Fishes 常见问题：Steam 发布、Mac 和移动端兼容性、下载方式、操作、Giant Squid（巨型鱿鱼）、Pay Debt（还债）、Heart Piece（心之碎片）和世界纪录。官方+社区解答。"
        
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">

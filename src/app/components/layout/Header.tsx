@@ -125,7 +125,7 @@ export function Header() {
 
       <Bubbles />
 
-      <div className="relative mx-auto max-w-5xl px-5 md:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 md:px-8">
         <div className="flex items-center justify-between gap-6" style={{ height: "68px" }}>
 
           {/* Logo */}
@@ -261,7 +261,7 @@ export function Header() {
           borderTop: "1px solid rgba(15,25,48,1)",
           backdropFilter: "blur(16px)",
         }}>
-          <div className="mx-auto max-w-5xl px-5 py-5">
+          <div className="mx-auto max-w-7xl px-5 py-5">
             <div className="mb-4 flex items-center gap-2.5">
               <span className="h-px flex-1" style={{ background: "linear-gradient(to right, transparent, rgba(245,158,11,0.20))" }} />
               <span style={{ ...NUNITO, fontSize: "0.5rem", letterSpacing: "0.24em", textTransform: "uppercase", color: "rgba(245,158,11,0.45)", fontWeight: 900 }}>Navigate</span>

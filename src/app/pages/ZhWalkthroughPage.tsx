@@ -15,7 +15,7 @@ export function ZhWalkthroughPage() {
         title="流程攻略：按天生存路线"
         description="Don't Sleep With The Fishes 流程攻略：从船只撤离到获救的按天生存路线。含剧透标注，附带新手友好路径。更新至 v1.1.2。"
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">

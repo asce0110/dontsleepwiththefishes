@@ -61,7 +61,7 @@ export function ItemsPage() {
         description="Don't Sleep With The Fishes items guide: every item, source, best use, event counter, ending priority, and v1.1.2 changes. S-tier to C-tier rankings with source confidence."
        
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">

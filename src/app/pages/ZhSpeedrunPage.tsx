@@ -23,7 +23,7 @@ export function ZhSpeedrunPage() {
         title="速通与世界纪录指南"
         description="追踪 Don't Sleep With The Fishes 的最高存活天数、社区生存纪录、验证要求、版本、截图、视频和已验证的通关纪录。"
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>

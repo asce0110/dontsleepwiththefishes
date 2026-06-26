@@ -95,7 +95,7 @@ export function Footer() {
       <WaveDivider />
       <FooterBubbles />
 
-      <div className="relative mx-auto max-w-5xl px-5 md:px-8 py-12">
+      <div className="relative mx-auto max-w-7xl px-5 md:px-8 py-12">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-12">
 
           {/* Brand column */}

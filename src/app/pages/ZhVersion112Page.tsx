@@ -35,7 +35,7 @@ export function ZhVersion112Page() {
         title="v1.1.2 更新说明详解"
         description="了解 Don't Sleep With The Fishes v1.1.2 补丁对鱼饵、胶带、宝箱、救援几率、威斯克船长、纪录、夜间事件和支援的改动。"
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>

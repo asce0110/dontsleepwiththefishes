@@ -113,7 +113,7 @@ export function FAQPage() {
         description="Don't Sleep With The Fishes FAQ: Steam release, Mac and mobile compatibility, how to download, controls, giant squid, pay debt, heart piece, and world record. Official + community answers."
        
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         {/* Header */}
         <div className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2">

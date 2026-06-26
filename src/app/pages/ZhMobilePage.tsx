@@ -22,7 +22,7 @@ export function ZhMobilePage() {
         title="手机版常见问题"
         description="Don't Sleep With The Fishes 手机版状态、官方平台说明、社区需求以及在游戏仍专注于 Windows 平台时的安全替代方案。"
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>

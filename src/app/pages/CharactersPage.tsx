@@ -153,7 +153,7 @@ export function CharactersPage() {
         title="Characters & Shipmates — Who to Save"
         description="Compare all 4 shipmates in Don't Sleep With The Fishes. Laurel, Frederik, Row, and Captain Whiskers — abilities, Support actions, best routes, and community poll."
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
 
         {/* Header */}
         <div className="mb-10">

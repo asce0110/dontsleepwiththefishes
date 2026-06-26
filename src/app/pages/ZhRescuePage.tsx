@@ -31,7 +31,7 @@ export function ZhRescuePage() {
         description="如何在 Don't Sleep With The Fishes 的希望事件中获得救援。了解何时使用信号枪、手电筒，以及 v1.1.2 中救援几率的运作方式。"
        
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(52,211,153,0.08)", border: "1px solid rgba(52,211,153,0.18)" }}>

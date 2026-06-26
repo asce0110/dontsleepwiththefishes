@@ -309,7 +309,7 @@ export function HomePage() {
             <div className="absolute inset-x-0 bottom-0 h-28" style={{ background: "linear-gradient(to top, #04080f, transparent)" }} />
           </div>
 
-          <div className="relative mx-auto max-w-5xl px-5 md:px-8 pt-16 pb-12 md:pt-24 md:pb-16">
+          <div className="relative mx-auto max-w-7xl px-5 md:px-8 pt-16 pb-12 md:pt-24 md:pb-16">
             <motion.div className="max-w-xl" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>
 
               {/* Badge row */}
@@ -374,7 +374,7 @@ export function HomePage() {
 
         {/* ===== INTRO TEXT ===== */}
         <section className="px-5 md:px-8 pb-10">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-7xl">
             <motion.div className="max-w-3xl" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }}>
               <p className="text-sm leading-relaxed mb-3" style={{ color: "rgba(122,146,170,0.85)", ...NUNITO }}>
                 <strong className="text-text-primary">Don't Sleep With The Fishes</strong> is a point-and-click survival horror game by DopplerGhost. You're trapped on a sinking ship — quickly gather items, choose a shipmate, and survive the nights at sea. This guide focuses on <strong className="text-text-primary">practical routes, item counters, ending requirements, and v1.1.2 changes</strong> — with spoiler-free summaries available.
@@ -388,7 +388,7 @@ export function HomePage() {
 
         {/* ===== ITCH.IO EMBED ===== */}
         <section className="px-5 md:px-8 pb-10">
-          <div className="mx-auto max-w-5xl flex justify-center">
+          <div className="mx-auto max-w-7xl flex justify-center">
             <div className="w-full max-w-[552px] overflow-hidden rounded-xl border" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,13,24,1)" }}>
               <iframe
                 src="https://itch.io/embed/4537532?dark=true"
@@ -408,7 +408,7 @@ export function HomePage() {
 
         {/* ===== BENTO GRID ===== */}
         <section className="px-5 md:px-8 pb-16 pt-2">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-7xl">
             <SectionHeader icon={<Anchor className="h-3 w-3 text-amber/40" />}>Browse the Wiki</SectionHeader>
             <BentoLayout />
           </div>
@@ -416,7 +416,7 @@ export function HomePage() {
 
         {/* ===== COMMUNITY BUZZ ===== */}
         <section className="px-5 md:px-8 pb-10">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-7xl">
             <SectionHeader icon={<Star className="h-3 w-3 text-amber/40" />}>What Players Say</SectionHeader>
             <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-3" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.18 }}>
               {[
@@ -442,7 +442,7 @@ export function HomePage() {
 
         {/* ===== EVENT COUNTER PREVIEW ===== */}
         <section className="px-5 md:px-8 pb-10">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-7xl">
             <SectionHeader icon={<Siren className="h-3 w-3 text-amber/40" />}>Night Event Counters</SectionHeader>
             <motion.div className="overflow-x-auto" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
               <table className="w-full text-left" style={{ borderCollapse: "collapse" }}>
@@ -481,7 +481,7 @@ export function HomePage() {
 
         {/* ===== ENDING PREVIEW ===== */}
         <section className="px-5 md:px-8 pb-10">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-7xl">
             <SectionHeader icon={<Trophy className="h-3 w-3 text-amber/40" />}>Endings Overview</SectionHeader>
             <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.25 }}>
               {endingPreview.map((item) => (

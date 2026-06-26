@@ -37,7 +37,7 @@ export default function ZhHomePage() {
           <div className="absolute inset-x-0 bottom-0 h-28" style={{ background: "linear-gradient(to top, #04080f, transparent)" }} />
         </div>
 
-        <div className="relative mx-auto max-w-5xl px-5 md:px-8 pt-16 pb-12 md:pt-24 md:pb-16">
+        <div className="relative mx-auto max-w-7xl px-5 md:px-8 pt-16 pb-12 md:pt-24 md:pb-16">
           <div className="max-w-xl">
             {/* Badge row */}
             <div className="mb-5 flex flex-wrap items-center gap-2.5">
@@ -105,7 +105,7 @@ export default function ZhHomePage() {
 
       {/* ===== INTRO TEXT ===== */}
       <section className="px-5 md:px-8 pb-10">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm leading-relaxed mb-3" style={{ color: "rgba(122,146,170,0.85)", ...NUNITO }}>
               <strong style={{ color: "#edf2f7" }}>Don't Sleep With The Fishes</strong> 是一款由 <strong style={{ color: "#edf2f7" }}>DopplerGhost</strong> 开发的 point-and-click 生存恐怖游戏。你被困在一艘正在下沉的船上——迅速收集物品、选择一名船员同伴，在海上度过每一个致命的夜晚。
@@ -119,7 +119,7 @@ export default function ZhHomePage() {
 
       {/* ===== BROWSE WIKI ===== */}
       <section className="px-5 md:px-8 pb-12">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-7xl">
           {/* Section header */}
           <div className="flex items-center gap-3 mb-5">
             <div className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(245,158,11,0.22), transparent)" }} />
@@ -139,7 +139,7 @@ export default function ZhHomePage() {
 
       {/* ===== ITCH.IO EMBED ===== */}
       <section className="px-5 md:px-8 pb-12">
-        <div className="mx-auto max-w-5xl flex justify-center">
+        <div className="mx-auto max-w-7xl flex justify-center">
           <div className="w-full max-w-[552px] overflow-hidden rounded-xl border" style={{ borderColor: "rgba(15,31,56,1)", background: "rgba(8,13,24,1)" }}>
             <iframe src="https://itch.io/embed/4537532?dark=true" width="552" height="167" frameBorder="0" title="itch.io 游戏" loading="lazy" className="w-full max-w-full" />
           </div>

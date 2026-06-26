@@ -22,7 +22,7 @@ export function ZhMacPage() {
         title="Mac 常见问题"
         description="Don't Sleep With The Fishes 的 Mac 兼容性说明、安全的解决方法以及在尝试 Windows 专用游戏文件前需要检查的事项。"
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>

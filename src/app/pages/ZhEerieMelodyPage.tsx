@@ -32,7 +32,7 @@ export function ZhEerieMelodyPage() {
         description="如何在 Don't Sleep With The Fishes 中应对诡异旋律事件。了解为什么胶带、水桶或雨伞比手电筒或望远镜更安全。"
        
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.18)" }}>

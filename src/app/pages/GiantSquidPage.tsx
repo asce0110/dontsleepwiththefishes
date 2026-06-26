@@ -33,7 +33,7 @@ export function GiantSquidPage() {
         description="Learn what to do when the Giant Squid appears in Don't Sleep With The Fishes, including the Anchor counter, Pay Debt prompt, Heart of the Sea route, and true ending notes."
        
       />
-      <div className="mx-auto max-w-5xl px-5 md:px-8 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-10 md:py-14">
 
         <div className="mb-8">
           <div className="mb-3 flex flex-wrap items-center gap-2">
