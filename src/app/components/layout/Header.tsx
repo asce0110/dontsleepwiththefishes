@@ -137,7 +137,7 @@ export function Header() {
                 background: "rgba(245,158,11,0.06)",
                 border: "1px solid rgba(245,158,11,0.14)",
               }}>
-              <LottiePlayer path="/animations/fish-swim.json" className="h-6 w-6" />
+              <LottiePlayer path="/animations/fish-swim.json" className="h-8 w-8" />
             </div>
 
             <div className="hidden sm:flex flex-col" style={{ gap: "2px" }}>
