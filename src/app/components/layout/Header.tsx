@@ -4,7 +4,6 @@ import { Fish, Menu, X, ChevronDown, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LottiePlayer } from "../LottiePlayer";
 
 const PIRATA: React.CSSProperties = { fontFamily: "'Fredoka', sans-serif", fontWeight: 600 };
 const NUNITO: React.CSSProperties = { fontFamily: "'Nunito', sans-serif" };
@@ -137,7 +136,16 @@ export function Header() {
                 background: "rgba(245,158,11,0.06)",
                 border: "1px solid rgba(245,158,11,0.14)",
               }}>
-              <LottiePlayer path="/animations/fish-swim.json" className="h-8 w-8" />
+              <Fish className="h-[18px] w-[18px] text-amber transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(245,158,11,0.90)]" style={{
+                animation: "fishBob 3s ease-in-out infinite",
+              }} />
+              <style>{`
+                @keyframes fishBob {
+                  0%, 100% { transform: translateY(0) rotate(0deg); }
+                  25%  { transform: translateY(-1.5px) rotate(-2deg); }
+                  75%  { transform: translateY(1px) rotate(2deg); }
+                }
+              `}</style>
             </div>
 
             <div className="hidden sm:flex flex-col" style={{ gap: "2px" }}>
